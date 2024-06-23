@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)https://lab.huaweicloud.com/experimentalStudy_qfmjkdhhgx_2212_0_1718884156676 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta http-equiv="Pragma" content="no-store"><meta http-equiv="Cache-Control" content="no-store"><link rel="icon" href="https://lab.huaweicloud.com/favicon.ico"><meta name="keywords" content="华为云实验、云计算、大数据、弹性云服务器、ECS、OBS、ModelArts、云实验、免费试用、云服务体验、华为云学院"><meta name="description" content="华为云官方实验平台，真实云环境，可一键预置实验环境，提供实验手册指导，快速体验华为云弹性云服务器ECS、OBS、ModelArts等华为云服务，轻松实践、调测和验证等操作。量级轻、上手快、体验好。"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><title>线下AI模型迁移ModelArts部署实验-华为云</title><!--<base href="./">--><base href="."><link rel="stylesheet" href="./线下AI模型迁移ModelArts部署实验-华为云_files/header-china.css"><link rel="stylesheet" href="./线下AI模型迁移ModelArts部署实验-华为云_files/developer-common.css"><link rel="stylesheet" href="./线下AI模型迁移ModelArts部署实验-华为云_files/global.css"><link rel="stylesheet" href="./线下AI模型迁移ModelArts部署实验-华为云_files/index.css"><script src="./线下AI模型迁移ModelArts部署实验-华为云_files/bi_new.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-281e9170.791f1d36.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-758c3076.41ce8fc8.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-d2eb5610.f47b31b7.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-6dd7f33d.6dbe6221.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-1de042e9.ab48ca0b.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-fa06c4f5.1c18c422.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-f53f56f8.87905972.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-6ed09ec9.f19e4027.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-62f64df5.d3036de8.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-fb512fb3.e5acc903.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-2979576f.d39a3f5c.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-26edaa31.d7e220af.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-9b979d36.3359284a.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-2ccb5807.a4da4529.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-0e4bd5df.eae9a21d.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-43d1f729.4d78fe91.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-55bee6e8.c3e02563.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-db255e8c.7334e589.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-ef0a544f.5b9d4ea8.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-f9edd1bc.0048fe9c.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-b72a146d.fb2bf899.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-55f3acff.3901d4f0.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-eafce2b7.b8ac83dd.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-b38bd96e.517dc0cb.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-f0d0bdd0.b634f37f.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-33a8b6f7.08fb9b6a.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-a0acf53f.21638867.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-c541d834.b1851e45.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-17ad044b.6041fdc1.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-95eb2204.977469f2.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-8a395b37.63bb61ec.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-a8096eb4.d7ae93ee.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-60411191.eae8533c.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-74559da4.bfc4b8ae.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-f197c201.06cfed5c.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-b5d721ca.f59bfbf2.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-2b4841d6.0876e77e.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-bb3d84b5.e40d35e9.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-3b96b80c.eabf4644.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-b1140668.a56c2ac3.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-a77c54e7.1e61a43f.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-38822fa6.a90cf69b.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-321cbe77.b6c3d5ef.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-0bc0478e.0be8e424.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-1fa17646.bc270218.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-db5ceba3.f5bf5e4d.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-67cc56b5.b45a4b51.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-66e3449b.68a404d1.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-70ac862f.0323bc37.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-0629eeaa.ddce7ed0.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-cf93f2cd.eb9f9f11.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-1335a4fa.9915253a.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-74130dc5.8d0f1be3.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-ccb836cc.bdb96608.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-5364701a.4e3a8cd7.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-b3e2cb75.16f80ee7.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-9f250a52.55d7231e.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-91c40cd8.abc46af2.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-8e343851.5587f69d.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-55e8f4bb.9f348854.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-587c9c12.3fae3d66.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-17c34557.a1130d15.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-37dcf926.3f3e3e13.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-887885f5.d8865786.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-f32b2f14.58fccd92.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-6bb03191.3076079b.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/index-43dd7041.c35406a6.js.download"></script><script defer="defer" src="./线下AI模型迁移ModelArts部署实验-华为云_files/index-0a037d97.dc167eb2.js.download"></script><link href="./线下AI模型迁移ModelArts部署实验-华为云_files/chunk-vendors-b7fe373e.ee5d8c5f.css" rel="stylesheet"><link href="./线下AI模型迁移ModelArts部署实验-华为云_files/index-43dd7041.45c233ba.css" rel="stylesheet"><style type="text/css">.eco-dialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.175s ease-in-out;
+  will-change: opacity;
+}
+.eco-dialog-inner {
+  position: relative;
+  box-sizing: border-box;
+  min-width: 400px;
+  max-width: 700px;
+  padding: 0;
+  color: #000;
+  background-color: #fff;
+  border: none;
+}
+.eco-dialog header {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  padding-left: 30px;
+  margin: 19px 0;
+  color: #252b3a;
+}
+.eco-dialog-title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.eco-dialog-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+  background-image: url("./images/icon.png");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+.eco-dialog-info {
+  background-position: 0 0;
+}
+.eco-dialog-success {
+  background-position: -24px 0;
+}
+.eco-dialog-error {
+  background-position: -48px 0;
+}
+.eco-dialog-warning {
+  background-position: -72px 0;
+}
+.eco-dialog section {
+  padding: 0 30px;
+  margin: 12px 0;
+  font-size: 12px;
+  line-height: 18px;
+  color: #575d6c;
+  text-align: justify;
+  letter-spacing: 0;
+  word-wrap: break-word;
+}
+.eco-dialog footer {
+  padding: 20px 30px 30px;
+  text-align: center;
+}
+.eco-dialog footer button {
+  padding: 5px 20px;
+  margin: 0 4px;
+  font-size: 12px;
+  line-height: 14px;
+  color: white;
+  cursor: pointer;
+  background: #c7000b;
+  border: 1px solid #c7000b;
+  border-radius: 1px;
+  transition: 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.eco-dialog footer button.cancel {
+  color: #252b3a;
+  background: #fff;
+  border: 1px solid #adb0b8;
+}
+.eco-dialog footer button:hover {
+  background-color: #d64a52;
+  border: 1px solid #d64a52;
+}
+.eco-dialog footer button:hover.cancel {
+  color: #d64a52;
+  background: #fff;
+  border: 1px solid #d64a52;
+}
+.eco-dialog-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 18px;
+  height: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  transform: rotate(45deg);
+}
+.eco-dialog-close::before, .eco-dialog-close::after {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  display: block;
+  width: 18px;
+  height: 2px;
+  content: "";
+  background-color: #666a75;
+}
+.eco-dialog-close::after {
+  top: 0;
+  left: 8px;
+  width: 2px;
+  height: 18px;
+}
+.eco-dialog[open] {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .eco-dialog-inner {
+    min-width: 60%;
+    max-width: calc(100% - 30px);
+  }
+}</style><style type="text/css">@charset "UTF-8";
+.eco-checkbox {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  font-size: 0;
+  line-height: 0;
+  transform: translateY(3px);
+}
+
+/* 开发者内容互动使用协议start */
+#eco-protocol-cover {
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.5;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  #ecoDevUserProtocol {
+    position: fixed;
+    top: 15%;
+    left: 16px;
+    z-index: 100001;
+    width: calc(100vw - 32px);
+    height: auto;
+    overflow: unset;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.1);
+  }
+  .eco-protocol-content .eco-protocol-close {
+    padding-top: 40px;
+  }
+  .eco-protocol-content .eco-protocol-close i {
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-top: -24px;
+    margin-right: 16px;
+    font-size: 16px;
+    color: #666a75;
+    cursor: pointer;
+    border-radius: 2px;
+    opacity: 1;
+  }
+  .eco-protocol-content .eco-protocol-header {
+    width: calc(100% - 32px);
+    margin: 0 auto;
+    text-align: center;
+  }
+  .eco-protocol-content .eco-protocol-header span {
+    display: inline-block;
+    height: 26px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    color: #252b3a;
+    opacity: 1;
+  }
+  .eco-protocol-content .eco-protocol-body {
+    width: calc(100% - 32px);
+    margin: 16px auto 0;
+    text-align: justify;
+  }
+  .eco-protocol-content .eco-protocol-body span {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #575d6c;
+    letter-spacing: 0;
+    opacity: 1;
+  }
+  .eco-protocol-content .eco-protocol-body a {
+    color: #c7000b;
+    text-decoration: none;
+  }
+  .eco-protocol-content .eco-protocol-body a:hover {
+    text-decoration: underline;
+  }
+  .eco-protocol-content .eco-protocol-notice {
+    width: calc(100% - 32px);
+    margin: 16px auto 0;
+  }
+  .eco-protocol-content .eco-protocol-notice label {
+    display: inline-block;
+    width: calc(100% - 26px);
+    padding-left: 8px;
+    margin-top: -2px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #8a8e99;
+    vertical-align: text-top;
+    cursor: pointer;
+    opacity: 1;
+  }
+  .eco-protocol-content .eco-protocol-footer {
+    position: relative;
+    margin: 16px 0;
+    text-align: center;
+    background: white;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #ecoDevUserProtocol {
+    /* display: none; */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 100001;
+    width: 660px;
+    height: auto;
+    margin-top: -142px;
+    overflow: unset;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    transform: translateX(-50%);
+  }
+  .eco-protocol-content .eco-protocol-close {
+    padding-top: 32px;
+  }
+  .eco-protocol-content .eco-protocol-close i {
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-top: -16px;
+    margin-right: 20px;
+    font-size: 16px;
+    color: #666a75;
+    cursor: pointer;
+    border-radius: 2px;
+    opacity: 1;
+  }
+  .eco-protocol-content .eco-protocol-header {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .eco-protocol-content .eco-protocol-header span {
+    display: inline-block;
+    height: 26px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    color: #252b3a;
+    text-align: center;
+    opacity: 1;
+  }
+  .eco-protocol-content .eco-protocol-body {
+    width: 600px;
+    margin-top: 16px;
+    margin-left: 32px;
+    text-align: justify;
+  }
+  .eco-protocol-content .eco-protocol-body span {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #575d6c;
+    opacity: 1;
+  }
+  .eco-protocol-content .eco-protocol-body a {
+    color: #c7000b;
+    text-decoration: none;
+  }
+  .eco-protocol-content .eco-protocol-body a:hover {
+    text-decoration: underline;
+  }
+  .eco-protocol-content .eco-protocol-notice {
+    display: flex;
+    padding: 0 32px;
+    margin-top: 24px;
+    text-align: left;
+  }
+  .eco-protocol-content .eco-protocol-notice label {
+    padding-left: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #8a8e99;
+    cursor: pointer;
+    opacity: 1;
+  }
+  .eco-protocol-content .eco-protocol-footer {
+    position: relative;
+    margin: 30px 0 25px;
+    text-align: center;
+    background: white;
+  }
+  .protocol-btn-red:hover {
+    color: #fff !important;
+    background-color: #d64a52 !important;
+    border-color: #d64a52 !important;
+  }
+}
+.eco-protocol-content .eco-protocol-footer a {
+  box-sizing: border-box;
+  height: 40px;
+  padding-top: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 2px;
+  opacity: 1;
+}
+
+.eco-protocol-body a:hover {
+  color: #c7000b;
+  text-decoration: underline;
+}
+
+.protocol-btn-primary {
+  color: #adb0b8 !important;
+  cursor: default !important;
+  background-color: #f5f5f6 !important;
+  border-color: #dee1e6 !important;
+}
+
+.protocol-btn-default {
+  margin-left: 10px;
+  color: #adb0b8 !important;
+  cursor: pointer !important;
+  border-color: #dee1e6 !important;
+  transition: 0.2s;
+}
+.protocol-btn-default:hover {
+  background-color: #fefefe !important;
+  border-color: #ccc !important;
+}
+
+.protocol-btn-red {
+  color: #fff !important;
+  background-color: #c7000b !important;
+  border-color: #c7000b !important;
+}
+
+#protocolSign {
+  display: block;
+}
+
+.eco-checkbox input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.eco-checkbox input[type=checkbox] + span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  background-color: #fff;
+  border: 1px solid #adb0b8;
+  border-radius: 2px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.eco-protocol-content .eco-protocol-body span:first-child {
+  display: block;
+}
+
+.eco-checkbox input[type=checkbox]:checked + span {
+  background-color: #c7000b;
+  border-color: #c7000b;
+}
+
+.eco-checkbox input[type=checkbox] + span i {
+  margin: 1px;
+  font-size: 12px;
+  color: #fff;
+  transition: 0.2s;
+  transform: scale(0);
+}
+
+.e-icon-confirm::before {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  content: "";
+  background-color: #fff;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  transition: 120ms transform ease-in-out;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.e-icon {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.eco-checkbox input[type=checkbox]:checked + span i {
+  transform: scale(1);
+}
+
+.eco-por-btn {
+  display: inline-block;
+  height: 32px;
+  padding-right: 24px;
+  padding-left: 24px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.eco-icon-close {
+  padding-top: 4px;
+}
+.eco-icon-close::before, .eco-icon-close::after {
+  display: block;
+  width: 17px;
+  height: 2px;
+  margin-bottom: 3px;
+  content: "";
+  background: #252b3a;
+  border-radius: 3px;
+  transform-origin: 12px;
+}
+.eco-icon-close::before {
+  transform: rotate(-45deg);
+}
+.eco-icon-close::after {
+  transform: rotate(45deg);
+}</style><style type="text/css">@keyframes el-skeleton-loading-5d8e5f9e {
+  0% {
+    background-position: 100% 50%;
+  }
+  to {
+    background-position: 0 50%;
+  }
+}
+.tp-skeleton-container[data-v-5d8e5f9e] {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+}
+.tp-skeleton-container[data-v-5d8e5f9e] .tp-skeleton-title[data-v-5d8e5f9e] {
+  width: 33%;
+  height: 20px;
+  margin-bottom: 16px;
+  background-color: #f5f5f6;
+}
+.tp-skeleton-container[data-v-5d8e5f9e] ul.tp-skeleton-rows[data-v-5d8e5f9e] {
+  padding: 0;
+}
+.tp-skeleton-container[data-v-5d8e5f9e] .tp-skeleton-row[data-v-5d8e5f9e],
+.tp-skeleton-container[data-v-5d8e5f9e] .tp-skeleton-title[data-v-5d8e5f9e],
+.tp-skeleton-container[data-v-5d8e5f9e] .tp-skeleton-block[data-v-5d8e5f9e] {
+  background: linear-gradient(90deg, #f5f5f6 25%, #e6e6e6 37%, #f5f5f6 63%);
+  background-size: 400% 100%;
+}
+.tp-skeleton-container[data-v-5d8e5f9e] .tp-skeleton-row[data-v-5d8e5f9e] {
+  height: 20px;
+  margin-bottom: 12px;
+  list-style: none;
+}
+.tp-skeleton-container[data-v-5d8e5f9e] .tp-skeleton-row[data-v-5d8e5f9e][data-v-5d8e5f9e]:last-child {
+  width: 65%;
+  margin-bottom: 0;
+}
+.tp-skeleton-container[data-v-5d8e5f9e] .tp-skeleton-block[data-v-5d8e5f9e] {
+  height: calc(100% - 20px - 16px);
+  min-height: 200px;
+  background-color: #f5f5f6;
+}
+.tp-skeleton-container[data-v-5d8e5f9e].is-animated[data-v-5d8e5f9e] .tp-skeleton-row[data-v-5d8e5f9e],
+.tp-skeleton-container[data-v-5d8e5f9e].is-animated[data-v-5d8e5f9e] .tp-skeleton-title[data-v-5d8e5f9e],
+.tp-skeleton-container[data-v-5d8e5f9e].is-animated[data-v-5d8e5f9e] .tp-skeleton-block[data-v-5d8e5f9e] {
+  animation: el-skeleton-loading-5d8e5f9e 1.4s ease infinite;
+}</style><script type="text/javascript" src="./线下AI模型迁移ModelArts部署实验-华为云_files/xmh5.min.js.download"></script><link rel="stylesheet" type="text/css" href="./线下AI模型迁移ModelArts部署实验-华为云_files/7104.f0f707fa.css"><script type="text/javascript" src="./线下AI模型迁移ModelArts部署实验-华为云_files/pmp.js.download"></script><style>
+          svg.svgicon,
+          .svgicon svg {
+            width: 1em;
+            height: 1em;
+            fill: currentColor;
+          }
+          .svgicon [fill]:not([fill="none"]):not([fill="transparent"]) {
+            fill: currentColor;
+          }
+          .svgicon [stroke]:not([stroke="none"]):not([stroke="transparent"]) {
+            stroke: currentColor;
+          }
+          </style><style>.w-e-toolbar,
+.w-e-text-container,
+.w-e-menu-panel {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  /*表情菜单样式*/
+  /*分割线样式*/
+}
+.w-e-toolbar h1,
+.w-e-text-container h1,
+.w-e-menu-panel h1 {
+  font-size: 32px !important;
+}
+.w-e-toolbar h2,
+.w-e-text-container h2,
+.w-e-menu-panel h2 {
+  font-size: 24px !important;
+}
+.w-e-toolbar h3,
+.w-e-text-container h3,
+.w-e-menu-panel h3 {
+  font-size: 18.72px !important;
+}
+.w-e-toolbar h4,
+.w-e-text-container h4,
+.w-e-menu-panel h4 {
+  font-size: 16px !important;
+}
+.w-e-toolbar h5,
+.w-e-text-container h5,
+.w-e-menu-panel h5 {
+  font-size: 13.28px !important;
+}
+.w-e-toolbar p,
+.w-e-text-container p,
+.w-e-menu-panel p {
+  font-size: 16px !important;
+}
+.w-e-toolbar .eleImg,
+.w-e-text-container .eleImg,
+.w-e-menu-panel .eleImg {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  padding: 0 3px;
+}
+.w-e-toolbar *,
+.w-e-text-container *,
+.w-e-menu-panel * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.w-e-toolbar hr,
+.w-e-text-container hr,
+.w-e-menu-panel hr {
+  cursor: pointer;
+  display: block;
+  height: 0px;
+  border: 0;
+  border-top: 3px solid #ccc;
+  margin: 20px 0;
+}
+.w-e-clear-fix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.w-e-drop-list-item {
+  position: relative;
+  top: 1px;
+  padding-right: 7px;
+  color: #333 !important;
+}
+.w-e-drop-list-tl {
+  padding-left: 10px;
+  text-align: left;
+}
+</style><style>@font-face {
+  font-family: 'w-e-icon';
+  src: url(data:font/woff;base64,d09GRgABAAAAABskAAsAAAAAGtgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABPUy8yAAABCAAAAGAAAABgDxIPFWNtYXAAAAFoAAABHAAAARz2mfAgZ2FzcAAAAoQAAAAIAAAACAAAABBnbHlmAAACjAAAFXwAABV8IH7+mGhlYWQAABgIAAAANgAAADYb6gumaGhlYQAAGEAAAAAkAAAAJAkjBWlobXR4AAAYZAAAAKQAAACkmYcEbmxvY2EAABkIAAAAVAAAAFReAmKYbWF4cAAAGVwAAAAgAAAAIAA0ALZuYW1lAAAZfAAAAYYAAAGGmUoJ+3Bvc3QAABsEAAAAIAAAACAAAwAAAAMD7wGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAA8fwDwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEAQAAAAA8ACAABAAcAAEAIOkB6QbpDekS6UfpZul36bnpu+m+6cbpy+nf6gvqDepS6lzqX+pl6nHqfPAN8BTxIPHc8fz//f//AAAAAAAg6QDpBukM6RLpR+ll6Xfpuem76b7pxunL6d/qC+oN6lLqXOpf6mLqcep38A3wFPEg8dzx/P/9//8AAf/jFwQXABb7FvcWwxamFpYWVRZUFlIWSxZHFjQWCRYIFcQVuxW5FbcVrBWnEBcQEQ8GDksOLAADAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAB//8ADwABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAAAAAAAAAAIAADc5AQAAAAAEAEEAAQO/A38ABQALABEAFwAAATMVIREzAxEhFSMVATUzESE1ETUhESM1Av/A/sJ+fgE+wP4Cfv7CAT5+Ar9+AT78ggE+fsACvsD+wn7+An7+wsAAAAAABABBAAEDvwN/AAUACwARABcAAAEhESM1IxM1MxEhNQERIRUjFREVMxUhEQKBAT5+wMB+/sL9wAE+wMD+wgN//sLA/X7A/sJ+AcIBPn7A/v7AfgE+AAAAAAIAAP/ABAADwAAEABMAAAE3AScBAy4BJxM3ASMBAyUBNQEHAYCAAcBA/kCfFzsyY4ABgMD+gMACgAGA/oBOAUBAAcBA/kD+nTI7FwERTgGA/oD9gMABgMD+gIAAAgAA/8AEAAOAACkALQAAAREjNTQmIyEiBh0BFBYzITI2PQEzESEVIyIGFREUFjsBMjY1ETQmKwE1ASE1IQQAwCYa/UAaJiYaAsAaJoD9wCANExMNgA0TEw0gAUD9QALAAYABgEAaJiYawBomJhpA/wCAEw3+wA0TEw0BQA0TQAGAQAAABAAAAAAEAAOAABAAIQAtADQAAAE4ATEROAExITgBMRE4ATEhNSEiBhURFBYzITI2NRE0JiMHFAYjIiY1NDYzMhYTITUTATM3A8D8gAOA/IAaJiYaA4AaJiYagDgoKDg4KCg4QP0A4AEAQOADQP0AAwBAJhr9ABomJhoDABom4Cg4OCgoODj9uIABgP7AwAAAAgAAAEAEAANAADgAPAAAASYnLgEnJiMiBw4BBwYHBgcOAQcGFRQXHgEXFhcWFx4BFxYzMjc+ATc2NzY3PgE3NjU0Jy4BJyYnARENAQPVNjg5djw9Pz89PHY5ODYLBwgLAwMDAwsIBws2ODl2PD0/Pz08djk4NgsHCAsDAwMDCwgHC/2rAUD+wAMgCAYGCAICAgIIBgYIKSoqWS0uLy8uLVkqKikIBgYIAgICAggGBggpKipZLS4vLy4tWSoqKf3gAYDAwAAAAAACAMD/wANAA8AAGwAnAAABIgcOAQcGFRQXHgEXFjEwNz4BNzY1NCcuAScmAyImNTQ2MzIWFRQGAgBCOzpXGRkyMngyMjIyeDIyGRlXOjtCUHBwUFBwcAPAGRlXOjtCeH19zEFBQUHMfX14Qjs6VxkZ/gBwUFBwcFBQcAAAAQAAAAAEAAOAACsAAAEiBw4BBwYHJxEhJz4BMzIXHgEXFhUUBw4BBwYHFzY3PgE3NjU0Jy4BJyYjAgA1MjJcKSkjlgGAkDWLUFBFRmkeHgkJIhgYHlUoICAtDAwoKIteXWoDgAoLJxscI5b+gJA0PB4eaUZFUCsoKUkgIRpgIysrYjY2OWpdXosoKAABAAAAAAQAA4AAKgAAExQXHgEXFhc3JicuAScmNTQ3PgE3NjMyFhcHIREHJicuAScmIyIHDgEHBgAMDC0gIChVHhgYIgkJHh5pRkVQUIs1kAGAliMpKVwyMjVqXV6LKCgBgDk2NmIrKyNgGiEgSSkoK1BFRmkeHjw0kAGAliMcGycLCigoi15dAAAAAAIAAABABAEDAAAmAE0AABMyFx4BFxYVFAcOAQcGIyInLgEnJjUnNDc+ATc2MxUiBgcOAQc+ASEyFx4BFxYVFAcOAQcGIyInLgEnJjUnNDc+ATc2MxUiBgcOAQc+AeEuKSk9ERISET0pKS4uKSk9ERIBIyN6UlFdQHUtCRAHCBICSS4pKT0REhIRPSkpLi4pKT0REgEjI3pSUV1AdS0JEAcIEgIAEhE9KSkuLikpPRESEhE9KSkuIF1RUnojI4AwLggTCgIBEhE9KSkuLikpPRESEhE9KSkuIF1RUnojI4AwLggTCgIBAAAGAED/wAQAA8AAAwAHAAsAEQAdACkAACUhFSERIRUhESEVIScRIzUjNRMVMxUjNTc1IzUzFRURIzUzNSM1MzUjNQGAAoD9gAKA/YACgP2AwEBAQIDAgIDAwICAgICAgAIAgAIAgMD/AMBA/fIyQJI8MkCS7v7AQEBAQEAABgAA/8AEAAPAAAMABwALABcAIwAvAAABIRUhESEVIREhFSEBNDYzMhYVFAYjIiYRNDYzMhYVFAYjIiYRNDYzMhYVFAYjIiYBgAKA/YACgP2AAoD9gP6ASzU1S0s1NUtLNTVLSzU1S0s1NUtLNTVLA4CA/wCA/wCAA0A1S0s1NUtL/rU1S0s1NUtL/rU1S0s1NUtLAAUAAABABWADAAADAAcACwAOABEAABMhFSEVIRUhFSEVIQEXNzUnBwADgPyAA4D8gAOA/IAD4MDAwMADAMBAwEDAAUDAwEDAwAAAAAADAAAAAAQAA6AAAwANABQAADchFSElFSE1EyEVITUhJQkBIxEjEQAEAPwABAD8AIABAAEAAQD9YAEgASDggEBAwEBAAQCAgMABIP7g/wABAAAAAAACAB7/zAPiA7QAMwBkAAABIiYnJicmNDc2PwE+ATMyFhcWFxYUBwYPAQYiJyY0PwE2NCcuASMiBg8BBhQXFhQHDgEjAyImJyYnJjQ3Nj8BNjIXFhQPAQYUFx4BMzI2PwE2NCcmNDc2MhcWFxYUBwYPAQ4BIwG4ChMIIxISEhIjwCNZMTFZIyMSEhISI1gPLA8PD1gpKRQzHBwzFMApKQ8PCBMKuDFZIyMSEhISI1gPLA8PD1gpKRQzHBwzFMApKQ8PDysQIxISEhIjwCNZMQFECAckLS1eLS0kwCIlJSIkLS1eLS0kVxAQDysPWCl0KRQVFRTAKXQpDysQBwj+iCUiJC0tXi0tJFcQEA8rD1gpdCkUFRUUwCl0KQ8rEA8PJC0tXi0tJMAiJQAAAAAFAAD/wAQAA8AAGwA3AFMAXwBrAAAFMjc+ATc2NTQnLgEnJiMiBw4BBwYVFBceARcWEzIXHgEXFhUUBw4BBwYjIicuAScmNTQ3PgE3NhMyNz4BNzY3BgcOAQcGIyInLgEnJicWFx4BFxYnNDYzMhYVFAYjIiYlNDYzMhYVFAYjIiYCAGpdXosoKCgoi15dampdXosoKCgoi15dalZMTHEgISEgcUxMVlZMTHEgISEgcUxMVisrKlEmJiMFHBtWODc/Pzc4VhscBSMmJlEqK9UlGxslJRsbJQGAJRsbJSUbGyVAKCiLXl1qal1eiygoKCiLXl1qal1eiygoA6AhIHFMTFZWTExxICEhIHFMTFZWTExxICH+CQYGFRAQFEM6OlYYGRkYVjo6QxQQEBUGBvcoODgoKDg4KCg4OCgoODgAAAEAAAFABAACQAAPAAATFRQWMyEyNj0BNCYjISIGABMNA8ANExMN/EANEwIgwA0TEw3ADRMTAAAAAwAA/8AEAAPAABsANwBDAAABIgcOAQcGFRQXHgEXFjMyNz4BNzY1NCcuAScmAyInLgEnJjU0Nz4BNzYzMhceARcWFRQHDgEHBhMHJwcXBxc3FzcnNwIAal1eiygoKCiLXl1qal1eiygoKCiLXl1qVkxMcSAhISBxTExWVkxMcSAhISBxTExKoKBgoKBgoKBgoKADwCgoi15dampdXosoKCgoi15dampdXosoKPxgISBxTExWVkxMcSAhISBxTExWVkxMcSAhAqCgoGCgoGCgoGCgoAACAAD/wAQAA8AADwAVAAABISIGFREUFjMhMjY1ETQmASc3FwEXA4D9ADVLSzUDADVLS/4L7VqTATNaA8BLNf0ANUtLNQMANUv85e5akgEyWgAAAAABAGX/wAObA8AAKQAAASImIyIHDgEHBhUUFjMuATU0NjcwBwYCBwYHFSETMzcjNx4BMzI2Nw4BAyBEaEZxU1RtGhtJSAYNZUoQEEs8PFkBPWzGLNc0LVUmLlAYHT0DsBAeHWE+P0FNOwsmN5lvA31+/sWPkCMZAgCA9gkPN2sJBwAAAAACAAAAAAQAA4AACQAXAAAlMwcnMxEjNxcjJREnIxEzFSE1MxEjBxEDgICgoICAoKCA/wBAwID+gIDAQMDAwAIAwMDA/wCA/UBAQALAgAEAAAMAwAAAA0ADgAAWAB8AKAAAAT4BNTQnLgEnJiMhESEyNz4BNzY1NCYBMzIWFRQGKwETIxEzMhYVFAYCxBwgFBRGLi81/sABgDUvLkYUFET+hGUqPDwpZp+fnyw+PgHbIlQvNS8uRhQU/IAUFEYuLzVGdAFGSzU1S/6AAQBLNTVLAAAAAAIAwAAAA0ADgAAfACMAAAEzERQHDgEHBiMiJy4BJyY1ETMRFBYXHgEzMjY3PgE1ASEVIQLAgBkZVzo7QkI7OlcZGYAbGBxJKChJHBgb/gACgP2AA4D+YDw0NU4WFxcWTjU0PAGg/mAeOBcYGxsYFzge/qCAAAAAAAEAgAAAA4ADgAALAAABFSMBMxUhNTMBIzUDgID+wID+QIABQIADgED9AEBAAwBAAAEAAAAABAADgAA9AAABFSMeARUUBgcOASMiJicuATUzFBYzMjY1NCYjITUhLgEnLgE1NDY3PgEzMhYXHgEVIzQmIyIGFRQWMzIWFwQA6xUWNTAscT4+cSwwNYByTk5yck7+AAEsAgQBMDU1MCxxPj5xLDA1gHJOTnJyTjtuKwHAQB1BIjViJCEkJCEkYjU0TEw0NExAAQMBJGI1NWIkISQkISRiNTRMTDQ0TCEfAAAACgAAAAAEAAOAAAMABwALAA8AEwAXABsAHwAjACcAABMRIREBNSEVHQEhNQEVITUjFSE1ESEVISUhFSERNSEVASEVISE1IRUABAD9gAEA/wABAP8AQP8AAQD/AAKAAQD/AAEA/IABAP8AAoABAAOA/IADgP3AwMBAwMACAMDAwMD/AMDAwAEAwMD+wMDAwAAABQAAAAAEAAOAAAMABwALAA8AEwAAEyEVIRUhFSERIRUhESEVIREhFSEABAD8AAKA/YACgP2ABAD8AAQA/AADgIBAgP8AgAFAgP8AgAAAAAAFAAAAAAQAA4AAAwAHAAsADwATAAATIRUhFyEVIREhFSEDIRUhESEVIQAEAPwAwAKA/YACgP2AwAQA/AAEAPwAA4CAQID/AIABQID/AIAAAAUAAAAABAADgAADAAcACwAPABMAABMhFSEFIRUhESEVIQEhFSERIRUhAAQA/AABgAKA/YACgP2A/oAEAPwABAD8AAOAgECA/wCAAUCA/wCAAAAAAAUAAAAABAADgAADAAcACwAPABMAABMhFSEVIRUhFSEVIRUhFSEVIRUhAAQA/AAEAPwABAD8AAQA/AAEAPwAA4CAQIBAgECAQIAAAAAGAAAAAAQAA4AAAwAHAAsADwATABYAABMhFSEFIRUhFSEVIRUhFSEFIRUhGQEFAAQA/AABgAKA/YACgP2AAoD9gP6ABAD8AAEAA4CAQIBAgECAQIABAAGAwAAAAAYAAAAABAADgAADAAcACwAPABMAFgAAEyEVIQUhFSEVIRUhFSEVIQUhFSEBESUABAD8AAGAAoD9gAKA/YACgP2A/oAEAPwAAQD/AAOAgECAQIBAgECAAoD+gMAAAQA/AD8C5gLmACwAACUUDwEGIyIvAQcGIyIvASY1ND8BJyY1ND8BNjMyHwE3NjMyHwEWFRQPARcWFQLmEE4QFxcQqKgQFxYQThAQqKgQEE4QFhcQqKgQFxcQThAQqKgQwxYQThAQqKgQEE4QFhcQqKgQFxcQThAQqKgQEE4QFxcQqKgQFwAAAAYAAAAAAyUDbgAUACgAPABNAFUAggAAAREUBwYrASInJjURNDc2OwEyFxYVMxEUBwYrASInJjURNDc2OwEyFxYXERQHBisBIicmNRE0NzY7ATIXFhMRIREUFxYXFjMhMjc2NzY1ASEnJicjBgcFFRQHBisBERQHBiMhIicmNREjIicmPQE0NzY7ATc2NzY7ATIXFh8BMzIXFhUBJQYFCCQIBQYGBQgkCAUGkgUFCCUIBQUFBQglCAUFkgUFCCUIBQUFBQglCAUFSf4ABAQFBAIB2wIEBAQE/oABABsEBrUGBAH3BgUINxobJv4lJhsbNwgFBQUFCLEoCBcWF7cXFhYJKLAIBQYCEv63CAUFBQUIAUkIBQYGBQj+twgFBQUFCAFJCAUGBgUI/rcIBQUFBQgBSQgFBgYF/lsCHf3jDQsKBQUFBQoLDQJmQwUCAgVVJAgGBf3jMCIjISIvAiAFBggkCAUFYBUPDw8PFWAFBQgAAgAHAEkDtwKvABoALgAACQEGIyIvASY1ND8BJyY1ND8BNjMyFwEWFRQHARUUBwYjISInJj0BNDc2MyEyFxYBTv72BgcIBR0GBuHhBgYdBQgHBgEKBgYCaQUFCP3bCAUFBQUIAiUIBQUBhf72BgYcBggHBuDhBgcHBh0FBf71BQgHBv77JQgFBQUFCCUIBQUFBQAAAAEAIwAAA90DbgCzAAAlIicmIyIHBiMiJyY1NDc2NzY3Njc2PQE0JyYjISIHBh0BFBcWFxYzFhcWFRQHBiMiJyYjIgcGIyInJjU0NzY3Njc2NzY9ARE0NTQ1NCc0JyYnJicmJyYnJiMiJyY1NDc2MzIXFjMyNzYzMhcWFRQHBiMGBwYHBh0BFBcWMyEyNzY9ATQnJicmJyY1NDc2MzIXFjMyNzYzMhcWFRQHBgciBwYHBhURFBcWFxYXMhcWFRQHBiMDwRkzMhoZMjMZDQgHCQoNDBEQChIBBxX+fhYHARUJEhMODgwLBwcOGzU1GhgxMRgNBwcJCQsMEA8JEgECAQIDBAQFCBIRDQ0KCwcHDho1NRoYMDEYDgcHCQoMDRAQCBQBBw8BkA4HARQKFxcPDgcHDhkzMhkZMTEZDgcHCgoNDRARCBQUCRERDg0KCwcHDgACAgICDAsPEQkJAQEDAwUMROAMBQMDBQzUUQ0GAQIBCAgSDwwNAgICAgwMDhEICQECAwMFDUUhAdACDQ0ICA4OCgoLCwcHAwYBAQgIEg8MDQICAgINDA8RCAgBAgEGDFC2DAcBAQcMtlAMBgEBBgcWDwwNAgICAg0MDxEICAEBAgYNT/3mRAwGAgIBCQgRDwwNAAACAAD/twP/A7cAEwA5AAABMhcWFRQHAgcGIyInJjU0NwE2MwEWFxYfARYHBiMiJyYnJicmNRYXFhcWFxYzMjc2NzY3Njc2NzY3A5soHh4avkw3RUg0NDUBbSEp/fgXJicvAQJMTHtHNjYhIRARBBMUEBASEQkXCA8SExUVHR0eHikDtxsaKCQz/plGNDU0SUkwAUsf/bErHx8NKHpNTBobLi86OkQDDw4LCwoKFiUbGhERCgsEBAIAAQAAAAAAAIWwaoFfDzz1AAsEAAAAAADbteOZAAAAANu145kAAP+3BWADwAAAAAgAAgAAAAAAAAABAAADwP/AAAAFgAAA//8FYAABAAAAAAAAAAAAAAAAAAAAKQQAAAAAAAAAAAAAAAIAAAAEAABBBAAAQQQAAAAEAAAABAAAAAQAAAAEAADABAAAAAQAAAAEAAAABAAAQAQAAAAFgAAABAAAAAQAAB4EAAAABAAAAAQAAAAEAAAABAAAZQQAAAAEAADABAAAwAQAAIAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAMlAD8DJQAAA74ABwQAACMD/wAAAAAAAAAKABQAHgBKAHYApADmAS4BkgHQAhYCXALQAw4DWAN+A6gEPgTeBPoFZAWOBdAF+AY6BnYGjgbmBy4HVgd+B6gHzgf8CCoIbgkmCXAKYgq+AAEAAAApALQACgAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAOAK4AAQAAAAAAAQAHAAAAAQAAAAAAAgAHAGAAAQAAAAAAAwAHADYAAQAAAAAABAAHAHUAAQAAAAAABQALABUAAQAAAAAABgAHAEsAAQAAAAAACgAaAIoAAwABBAkAAQAOAAcAAwABBAkAAgAOAGcAAwABBAkAAwAOAD0AAwABBAkABAAOAHwAAwABBAkABQAWACAAAwABBAkABgAOAFIAAwABBAkACgA0AKRpY29tb29uAGkAYwBvAG0AbwBvAG5WZXJzaW9uIDEuMABWAGUAcgBzAGkAbwBuACAAMQAuADBpY29tb29uAGkAYwBvAG0AbwBvAG5pY29tb29uAGkAYwBvAG0AbwBvAG5SZWd1bGFyAFIAZQBnAHUAbABhAHJpY29tb29uAGkAYwBvAG0AbwBvAG5Gb250IGdlbmVyYXRlZCBieSBJY29Nb29uLgBGAG8AbgB0ACAAZwBlAG4AZQByAGEAdABlAGQAIABiAHkAIABJAGMAbwBNAG8AbwBuAC4AAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="w-e-icon-"],
+[class*=" w-e-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'w-e-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.w-e-icon-close:before {
+  content: "\f00d";
+}
+.w-e-icon-upload2:before {
+  content: "\e9c6";
+}
+.w-e-icon-trash-o:before {
+  content: "\f014";
+}
+.w-e-icon-header:before {
+  content: "\f1dc";
+}
+.w-e-icon-pencil2:before {
+  content: "\e906";
+}
+.w-e-icon-paint-brush:before {
+  content: "\f1fc";
+}
+.w-e-icon-image:before {
+  content: "\e90d";
+}
+.w-e-icon-play:before {
+  content: "\e912";
+}
+.w-e-icon-location:before {
+  content: "\e947";
+}
+.w-e-icon-undo:before {
+  content: "\e965";
+}
+.w-e-icon-redo:before {
+  content: "\e966";
+}
+.w-e-icon-quotes-left:before {
+  content: "\e977";
+}
+.w-e-icon-list-numbered:before {
+  content: "\e9b9";
+}
+.w-e-icon-list2:before {
+  content: "\e9bb";
+}
+.w-e-icon-link:before {
+  content: "\e9cb";
+}
+.w-e-icon-happy:before {
+  content: "\e9df";
+}
+.w-e-icon-bold:before {
+  content: "\ea62";
+}
+.w-e-icon-underline:before {
+  content: "\ea63";
+}
+.w-e-icon-italic:before {
+  content: "\ea64";
+}
+.w-e-icon-strikethrough:before {
+  content: "\ea65";
+}
+.w-e-icon-table2:before {
+  content: "\ea71";
+}
+.w-e-icon-paragraph-left:before {
+  content: "\ea77";
+}
+.w-e-icon-paragraph-center:before {
+  content: "\ea78";
+}
+.w-e-icon-paragraph-right:before {
+  content: "\ea79";
+}
+.w-e-icon-paragraph-justify:before {
+  content: "\ea7a";
+}
+.w-e-icon-terminal:before {
+  content: "\f120";
+}
+.w-e-icon-page-break:before {
+  content: "\ea68";
+}
+.w-e-icon-cancel-circle:before {
+  content: "\ea0d";
+}
+.w-e-icon-font:before {
+  content: "\ea5c";
+}
+.w-e-icon-text-heigh:before {
+  content: "\ea5f";
+}
+.w-e-icon-paint-format:before {
+  content: "\e90c";
+}
+.w-e-icon-indent-increase:before {
+  content: "\ea7b";
+}
+.w-e-icon-indent-decrease:before {
+  content: "\ea7c";
+}
+.w-e-icon-row-height:before {
+  content: "\e9be";
+}
+.w-e-icon-fullscreen_exit:before {
+  content: "\e900";
+}
+.w-e-icon-fullscreen:before {
+  content: "\e901";
+}
+.w-e-icon-split-line:before {
+  content: "\ea0b";
+}
+.w-e-icon-checkbox-checked:before {
+  content: "\ea52";
+}
+</style><style>.w-e-toolbar {
+  display: flex;
+  padding: 0 6px;
+  flex-wrap: wrap;
+  position: relative;
+  /* 单个菜单 */
+}
+.w-e-toolbar .w-e-menu {
+  position: relative;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+.w-e-toolbar .w-e-menu i {
+  color: #999;
+}
+.w-e-toolbar .w-e-menu:hover {
+  background-color: #F6F6F6;
+}
+.w-e-toolbar .w-e-menu:hover i {
+  color: #333;
+}
+.w-e-toolbar .w-e-active i {
+  color: #1e88e5;
+}
+.w-e-toolbar .w-e-active:hover i {
+  color: #1e88e5;
+}
+.w-e-menu-tooltip {
+  position: absolute;
+  display: flex;
+  color: #f1f1f1;
+  background-color: rgba(0, 0, 0, 0.75);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 4px 5px 6px;
+  justify-content: center;
+  align-items: center;
+}
+.w-e-menu-tooltip-up::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border: 5px solid rgba(0, 0, 0, 0);
+  border-top-color: rgba(0, 0, 0, 0.73);
+}
+.w-e-menu-tooltip-down::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border: 5px solid rgba(0, 0, 0, 0);
+  border-bottom-color: rgba(0, 0, 0, 0.73);
+}
+.w-e-menu-tooltip-item-wrapper {
+  font-size: 14px;
+  margin: 0 5px;
+}
+</style><style>.w-e-text-container {
+  position: relative;
+  height: 100%;
+}
+.w-e-text-container .w-e-progress {
+  position: absolute;
+  background-color: #1e88e5;
+  top: 0;
+  left: 0;
+  height: 1px;
+}
+.w-e-text-container .placeholder {
+  color: #D4D4D4;
+  position: absolute;
+  font-size: 11pt;
+  line-height: 22px;
+  left: 10px;
+  top: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  z-index: -1;
+}
+.w-e-text {
+  padding: 0 10px;
+  overflow-y: auto;
+}
+.w-e-text p,
+.w-e-text h1,
+.w-e-text h2,
+.w-e-text h3,
+.w-e-text h4,
+.w-e-text h5,
+.w-e-text table,
+.w-e-text pre {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+.w-e-text ul,
+.w-e-text ol {
+  margin: 10px 0 10px 20px;
+}
+.w-e-text blockquote {
+  display: block;
+  border-left: 8px solid #d0e5f2;
+  padding: 5px 10px;
+  margin: 10px 0;
+  line-height: 1.4;
+  font-size: 100%;
+  background-color: #f1f1f1;
+}
+.w-e-text code {
+  display: inline-block;
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  padding: 3px 5px;
+  margin: 0 3px;
+}
+.w-e-text pre code {
+  display: block;
+}
+.w-e-text table {
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+.w-e-text table td,
+.w-e-text table th {
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  padding: 3px 5px;
+  min-height: 30px;
+  height: 30px;
+}
+.w-e-text table th {
+  border-bottom: 2px solid #ccc;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+.w-e-text:focus {
+  outline: none;
+}
+.w-e-text img {
+  cursor: pointer;
+}
+.w-e-text img:hover {
+  box-shadow: 0 0 5px #333;
+}
+.w-e-text .w-e-todo {
+  margin: 0 0 0 20px;
+}
+.w-e-text .w-e-todo li {
+  list-style: none;
+  font-size: 1em;
+}
+.w-e-text .w-e-todo li span:nth-child(1) {
+  position: relative;
+  left: -18px;
+}
+.w-e-text .w-e-todo li span:nth-child(1) input {
+  position: absolute;
+  margin-right: 3px;
+}
+.w-e-text .w-e-todo li span:nth-child(1) input[type=checkbox] {
+  top: 50%;
+  margin-top: -6px;
+}
+.w-e-tooltip {
+  position: absolute;
+  display: flex;
+  color: #f1f1f1;
+  background-color: rgba(0, 0, 0, 0.75);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 4px 5px 6px;
+  justify-content: center;
+  align-items: center;
+}
+.w-e-tooltip-up::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border: 5px solid rgba(0, 0, 0, 0);
+  border-top-color: rgba(0, 0, 0, 0.73);
+}
+.w-e-tooltip-down::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border: 5px solid rgba(0, 0, 0, 0);
+  border-bottom-color: rgba(0, 0, 0, 0.73);
+}
+.w-e-tooltip-item-wrapper {
+  cursor: pointer;
+  font-size: 14px;
+  margin: 0 5px;
+}
+.w-e-tooltip-item-wrapper:hover {
+  color: #ccc;
+  text-decoration: underline;
+}
+</style><style>.w-e-menu .w-e-panel-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border: 1px solid #ccc;
+  border-top: 0;
+  box-shadow: 1px 1px 2px #ccc;
+  color: #333;
+  background-color: #fff;
+  text-align: left;
+  /* 为 emotion panel 定制的样式 */
+  /* 上传图片、上传视频的 panel 定制样式 */
+}
+.w-e-menu .w-e-panel-container .w-e-panel-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5px;
+  margin: 2px 5px 0 0;
+  cursor: pointer;
+  color: #999;
+}
+.w-e-menu .w-e-panel-container .w-e-panel-close:hover {
+  color: #333;
+}
+.w-e-menu .w-e-panel-container .w-e-panel-tab-title {
+  list-style: none;
+  display: flex;
+  font-size: 14px;
+  margin: 2px 10px 0 10px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.w-e-menu .w-e-panel-container .w-e-panel-tab-title .w-e-item {
+  padding: 3px 5px;
+  color: #999;
+  cursor: pointer;
+  margin: 0 3px;
+  position: relative;
+  top: 1px;
+}
+.w-e-menu .w-e-panel-container .w-e-panel-tab-title .w-e-active {
+  color: #333;
+  border-bottom: 1px solid #333;
+  cursor: default;
+  font-weight: 700;
+}
+.w-e-menu .w-e-panel-container .w-e-panel-tab-content {
+  padding: 10px 15px 10px 15px;
+  font-size: 16px;
+  /* 输入框的样式 */
+  /* 按钮的样式 */
+}
+.w-e-menu .w-e-panel-container .w-e-panel-tab-content input:focus,
+.w-e-menu .w-e-panel-container .w-e-panel-tab-content textarea:focus,
+.w-e-menu .w-e-panel-container .w-e-panel-tab-content button:focus {
+  outline: none;
+}
+.w-e-menu .w-e-panel-container .w-e-panel-tab-content textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-top: 10px;
+}
+.w-e-menu .w-e-panel-container .w-e-panel-tab-content textarea:focus {
+  border-color: #1e88e5;
+}
+.w-e-menu .w-e-panel-container .w-e-panel-tab-content input[type=text] {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  height: 20px;
+  color: #333;
+  text-align: left;
+}
+.w-e-menu .w-e-panel-container .w-e-panel-tab-content input[type=text].small {
+  width: 30px;
+  text-align: center;
+}
+.w-e-menu .w-e-panel-container .w-e-panel-tab-content input[type=text].block {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+.w-e-menu .w-e-panel-container .w-e-panel-tab-content input[type=text]:focus {
+  border-bottom: 2px solid #1e88e5;
+}
+.w-e-menu .w-e-panel-container .w-e-panel-tab-content .w-e-button-container button {
+  font-size: 14px;
+  color: #1e88e5;
+  border: none;
+  padding: 5px 10px;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.w-e-menu .w-e-panel-container .w-e-panel-tab-content .w-e-button-container button.left {
+  float: left;
+  margin-right: 10px;
+}
+.w-e-menu .w-e-panel-container .w-e-panel-tab-content .w-e-button-container button.right {
+  float: right;
+  margin-left: 10px;
+}
+.w-e-menu .w-e-panel-container .w-e-panel-tab-content .w-e-button-container button.gray {
+  color: #999;
+}
+.w-e-menu .w-e-panel-container .w-e-panel-tab-content .w-e-button-container button.red {
+  color: #c24f4a;
+}
+.w-e-menu .w-e-panel-container .w-e-panel-tab-content .w-e-button-container button:hover {
+  background-color: #f1f1f1;
+}
+.w-e-menu .w-e-panel-container .w-e-panel-tab-content .w-e-button-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.w-e-menu .w-e-panel-container .w-e-emoticon-container .w-e-item {
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0 3px;
+  display: inline-block;
+}
+.w-e-menu .w-e-panel-container .w-e-up-img-container,
+.w-e-menu .w-e-panel-container .w-e-up-video-container {
+  text-align: center;
+}
+.w-e-menu .w-e-panel-container .w-e-up-img-container .w-e-up-btn,
+.w-e-menu .w-e-panel-container .w-e-up-video-container .w-e-up-btn {
+  display: inline-block;
+  color: #999;
+  cursor: pointer;
+  font-size: 60px;
+  line-height: 1;
+}
+.w-e-menu .w-e-panel-container .w-e-up-img-container .w-e-up-btn:hover,
+.w-e-menu .w-e-panel-container .w-e-up-video-container .w-e-up-btn:hover {
+  color: #333;
+}
+</style><style>.w-e-toolbar .w-e-droplist {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  border: 1px solid #f1f1f1;
+  border-right-color: #ccc;
+  border-bottom-color: #ccc;
+}
+.w-e-toolbar .w-e-droplist .w-e-dp-title {
+  text-align: center;
+  color: #999;
+  line-height: 2;
+  border-bottom: 1px solid #f1f1f1;
+  font-size: 13px;
+}
+.w-e-toolbar .w-e-droplist ul.w-e-list {
+  list-style: none;
+  line-height: 1;
+}
+.w-e-toolbar .w-e-droplist ul.w-e-list li.w-e-item {
+  color: #333;
+  padding: 5px 0;
+}
+.w-e-toolbar .w-e-droplist ul.w-e-list li.w-e-item:hover {
+  background-color: #f1f1f1;
+}
+.w-e-toolbar .w-e-droplist ul.w-e-block {
+  list-style: none;
+  text-align: left;
+  padding: 5px;
+}
+.w-e-toolbar .w-e-droplist ul.w-e-block li.w-e-item {
+  display: inline-block;
+  padding: 3px 5px;
+}
+.w-e-toolbar .w-e-droplist ul.w-e-block li.w-e-item:hover {
+  background-color: #f1f1f1;
+}
+</style><style>.w-e-text-container {
+  overflow: hidden;
+}
+.w-e-img-drag-mask {
+  position: absolute;
+  z-index: 1;
+  border: 1px dashed #ccc;
+  box-sizing: border-box;
+}
+.w-e-img-drag-mask .w-e-img-drag-rb {
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: se-resize;
+}
+.w-e-img-drag-mask .w-e-img-drag-show-size {
+  min-width: 110px;
+  height: 22px;
+  line-height: 22px;
+  font-size: 14px;
+  color: #999;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #999;
+  color: #fff;
+  border-radius: 2px;
+  padding: 0 5px;
+}
+</style><style>.w-e-table {
+  display: flex;
+}
+.w-e-table .w-e-table-input {
+  width: 40px;
+  text-align: center!important;
+  margin: 0 5px;
+}
+</style><style>.w-e-full-screen-editor {
+  position: fixed;
+  width: 100%!important;
+  height: 100%!important;
+  left: 0;
+  top: 0;
+}
+</style><style>.w-e-content-mantle {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+.w-e-content-mantle .w-e-content-preview {
+  width: 100%;
+  min-height: 100%;
+  padding: 0 10px;
+  line-height: 1.5;
+}
+.w-e-content-mantle .w-e-content-preview img {
+  cursor: default;
+}
+.w-e-content-mantle .w-e-content-preview img:hover {
+  box-shadow: none;
+}
+.w-e-menue-mantle {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+</style></head><body class="notranslate"><noscript><strong>We're sorry but 开发者云实验_云实验KooLabs_在线实验_上云实践_云计算实验_AI实验_华为云官方实验平台-华为云 doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app" class="notranslate" data-v-app=""><div class="app"><div style="display: none;"></div><div ref_key="scrollbar$" class="el-scrollbar"><div ref_key="wrap$" class="el-scrollbar__wrap el-scrollbar__wrap--hidden-default"><div ref_key="resize$" class="el-scrollbar__view"><div id="body_box" style="height: 100vh;"><div id="header" style="height: 0px;" class="logined"></div><input id="sessionNum" style="display: none;"><p class="black-toaster"></p><div class="test_box" id="test_box"><div class="l_manual_box manual_box_no manual_box_no" id="l_manual_box"><div class="manual_head"><ul class="manual_head_classify"><li class="manual active" id="course">实验手册</li><li class="questions" id="questions">在线问答</li><li class="report list-bold" id="reports">实验报告</li></ul></div><div class="left_loing" style="display: none;"><img src="data:image/gif;base64,R0lGODlhJQAlAJECAL3L2AYrTv///wAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFCgACACwAAAAAJQAlAAACi5SPqcvtDyGYIFpF690i8xUw3qJBwUlSadmcLqYmGQu6KDIeM13beGzYWWy3DlB4IYaMk+Dso2RWkFCfLPcRvFbZxFLUDTt21BW56TyjRep1e20+i+eYMR145W2eefj+6VFmgTQi+ECVY8iGxcg35phGo/iDFwlTyXWphwlm1imGRdcnuqhHeop6UAAAIfkEBQoAAgAsEAACAAQACwAAAgWMj6nLXAAh+QQFCgACACwVAAUACgALAAACFZQvgRi92dyJcVJlLobUdi8x4bIhBQAh+QQFCgACACwXABEADAADAAACBYyPqcsFACH5BAUKAAIALBUAFQAKAAsAAAITlGKZwWoMHYxqtmplxlNT7ixGAQAh+QQFCgACACwQABgABAALAAACBYyPqctcACH5BAUKAAIALAUAFQAKAAsAAAIVlC+BGL3Z3IlxUmUuhtR2LzHhsiEFACH5BAUKAAIALAEAEQAMAAMAAAIFjI+pywUAIfkEBQoAAgAsBQAFAAoACwAAAhOUYJnAagwdjGq2amXGU1PuLEYBACH5BAUKAAIALBAAAgAEAAsAAAIFhI+py1wAIfkEBQoAAgAsFQAFAAoACwAAAhWUL4AIvdnciXFSZS6G1HYvMeGyIQUAIfkEBQoAAgAsFwARAAwAAwAAAgWEj6nLBQAh+QQFCgACACwVABUACgALAAACE5RgmcBqDB2MarZqZcZTU+4sRgEAIfkEBQoAAgAsEAAYAAQACwAAAgWEj6nLXAAh+QQFCgACACwFABUACgALAAACFZQvgAi92dyJcVJlLobUdi8x4bIhBQAh+QQFCgACACwBABEADAADAAACBYSPqcsFADs=" class="left_gif"></div><div id="TK_content" style=""><div class="manual_box con" id="tab-course"><div class="temporary_account notranslate"><p class="title_box">华为云实验账号</p><p class="title_warning" title="请使用实验账号登录，确保实验顺利进行"><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/warning.d5a1a295.svg">请使用实验账号登录，确保实验顺利进行</p><div class="input"><p><span class="input_name">账号名:</span><span class="cipher" id="Faccount" data-clipboard-action="copy" data="Sandbox-Voyager2616" data-clipboard-target="#Faccount">Sandbox-Voyager2616</span><span class="copy_icon"><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/copy_new.07d91cec.svg" alt=""></span><span class="alread_copy" style="display: none;">已复制</span></p><p><span class="input_name">用户名:</span><span class="cipher" id="Zaccount" data-clipboard-action="copy" data="Sandbox-user" data-clipboard-target="#Zaccount">Sandbox-user</span><span class="copy_icon"><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/copy_new.07d91cec.svg" alt=""></span><span class="alread_copy" style="display: none;">已复制</span></p><p><span class="input_name">密码:</span><span class="cipher"><span id="cipher" data-clipboard-action="copy" data-clipboard-target="#cipher" data="tlsSBV.++855">************</span><span class="pwd_icon exper_icon_eyeopen" style="display: none;"></span><span class="pwd_icon exper_icon_eyeclosed"></span></span><span class="copy_icon"><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/copy_new.07d91cec.svg" alt=""></span><span class="alread_copy" style="display: none;">已复制</span></p><p class="environment" style="display: none;"><button class="found_environment" type="button">预置实验环境</button><img class="loading_img" src="data:image/png;base64,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"><span class="prompt_mess">预置成功</span></p></div></div><div class="sc" style="height: calc(100% - 244.952px);"><div class="list"><ul class="list_s"><li class="dcolorSucc" id="dh_1313457"></li><li class="dcolorSucc" id="dh_1313459"></li><li class="dcolorSucc" id="dh_1313460"></li><li class="dcolorSucc" id="dh_1313470"></li><li class="dcolorSucc" id="dh_1313471"></li></ul></div><div class="shouce" id="shouceScroll"><div class="title"><h2 class="name">线下AI模型迁移ModelArts部署</h2><h4 class="intro" style="white-space: pre-wrap;">通过云上快速调试，编写推理代码，保存自定义镜像方式进行AI应用的创建，并部署成华为云在线服务，方便调用。</h4></div><div class="qbbz"><div class="module colorSucc" id="mk_1313457"><span class="sp_skip"><a class="skip" href="javascript:;">跳过此步</a></span><div class="bz" id="bz_1313456" data-type="1"><h3>操作前提：登录华为云</h3><div><p></p><!----><!----><!----><!----></div><div><p>进入【实验操作桌面】，打开Chrome浏览器，选择“IAM 用户登录”，并在对话框中输入系统为您分配的华为云实验账号和密码进行登录。</p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/8f4d1bce70c044f0a8ac7bce2479bfa9.png" alt=""><!----><!----></div><div><p><font color="#c7000b"><strong>注意：请使用实验手册上方账号信息，切勿使用您自己的华为云账号登录。</strong></font></p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/483fcb9ef38347fabf19e04f6631c080.png" alt=""><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div></div><div class="bz" id="bz_1313457" data-type="1"><h3>1 环境准备</h3><div><p>进入控制台页面后，点击左上角服务列表按钮,下拉找到【人工智能】,再找到【ModelArts】,点击进入 “ModelArts”控制台页面,如下图所示:</p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/90f74d2f7df84eda97fe68547a5927ee.png" alt=""><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>进入ModelArts控制管理台，在左侧导航栏点击【开发环境】-&gt; 【Notebook】，进入notebook列表页面，如下图所示：</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/9e2885faf1ee47d1a7095a77812ab9c9.png" alt=""><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>点击页面左上角“创建”按钮，新建一个notebook，填写参数，下图所示：</p><!----><!----><!----><!----></div><div><p><strong>说明</strong>：如GPU：1\*P100(16GB)|CPU:8核64GB规格售罄，请选择GPU：1\*V100(32GB)|CPU:8核64GB规格</p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/066f88a860694266a2aa905d5da295fb.png" alt=""><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>点击“立即创建”，确认产品规格后，点击提交，完成Notebook的创建。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>返回Notebook列表页面，等待新创建Notebook状态变为“运行中”后，点击“打开”进入Notebook。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>进入Notebook页面后，打开terminal，如下图所示：</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/69f4e23a0793461b8b10319d1024a321.png" alt=""><!----><!----></div><div><p>输入如下命令，查看已安装Python环境信息</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><!----><pre style="margin-top: 20px; margin-bottom: 20px;">                        <button class="code_btn" data-clipboard-action="copy" data-clipboard-target="#code_17634858">拷贝代码</button><code id="code_17634858" class="hljs nginx"><span class="hljs-attribute">conda</span> <span class="hljs-literal">info</span> -e</code></pre><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>在右侧浏览器复制并打开此链接：https://devcloud.cn-north-4.huaweicloud.com/codehub/project/3674262af83841b49a35edcdcd2ac6d2/codehub/2136282/home?ref=main</p><!----><!----><!----><!----></div><div><p>进入DINO代码仓库，下面将以此开源算法为例，演示如何在华为云Notebook上快速运行,算法详细介绍请参考 README.md 。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>① 在terminal里继续输入如下命令，克隆仓库</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><!----><pre style="margin-top: 20px; margin-bottom: 20px;">                        <button class="code_btn" data-clipboard-action="copy" data-clipboard-target="#code_17634866">拷贝代码</button><code id="code_17634866" class="hljs awk">git clone https:<span class="hljs-regexp">//</span>codehub.devcloud.cn-north-<span class="hljs-number">4</span>.huaweicloud.com<span class="hljs-regexp">/DINO00002/</span>DINO.git
+cd DINO</code></pre><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/997b43b83c7944c4831178ccdd5aa980.png" alt=""><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>如上图所示，表示已完成代码克隆，点击左侧任务栏顶部刷新按钮，即可查看代码。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>② 查看Pytorch版本</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><!----><pre style="margin-top: 20px; margin-bottom: 20px;">                        <button class="code_btn" data-clipboard-action="copy" data-clipboard-target="#code_17634875">拷贝代码</button><code id="code_17634875" class="hljs 1c">pip list <span class="hljs-string">| grep torch</span></code></pre><!----></div><div><p></p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>③ 安装其他需要的包</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><!----><pre style="margin-top: 20px; margin-bottom: 20px;">                        <button class="code_btn" data-clipboard-action="copy" data-clipboard-target="#code_17634880">拷贝代码</button><code id="code_17634880" class="hljs cmake">pip <span class="hljs-keyword">install</span> -r requirements.txt</code></pre><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>④ 编译CUDA算子</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><!----><pre style="margin-top: 20px; margin-bottom: 20px;">                        <button class="code_btn" data-clipboard-action="copy" data-clipboard-target="#code_17634884">拷贝代码</button><code id="code_17634884" class="hljs awk">cd models<span class="hljs-regexp">/dino/</span>ops</code></pre><!----></div><div><!----><!----><!----><pre style="margin-top: 20px; margin-bottom: 20px;">                        <button class="code_btn" data-clipboard-action="copy" data-clipboard-target="#code_17634885">拷贝代码</button><code id="code_17634885" class="hljs vim"><span class="hljs-keyword">python</span> setup.<span class="hljs-keyword">py</span> build install</code></pre><!----></div><div><!----><!----><!----><pre style="margin-top: 20px; margin-bottom: 20px;">                        <button class="code_btn" data-clipboard-action="copy" data-clipboard-target="#code_17634886">拷贝代码</button><code id="code_17634886" class="hljs clean"># 单元测试（应查看所有检查均为<span class="hljs-literal">True</span>）
+python test.py</code></pre><!----></div><div><!----><!----><!----><pre style="margin-top: 20px; margin-bottom: 20px;">                        <button class="code_btn" data-clipboard-action="copy" data-clipboard-target="#code_17634887">拷贝代码</button><code id="code_17634887" class="hljs awk">cd ..<span class="hljs-regexp">/../</span>..  <span class="hljs-comment"># 回到代码主目录</span></code></pre><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/f40ff5ec8ec349d28b0e629b59722f02.png" alt=""><!----><!----></div></div></div><div class="module colorSucc" id="mk_1313459"><span class="sp_skip"><a class="skip" href="javascript:;">跳过此步</a></span><div class="bz" id="bz_1313458" data-type="1"><h3>2 数据准备</h3><div><p></p><!----><!----><!----><!----></div></div><div class="bz" id="bz_1313459" data-type="1"><h4>2.1 创建桶</h4><div><p></p><!----><!----><!----><!----></div><div><p>进入控制台，将光标移动至左边栏，弹出菜单中选择“服务列表”-&gt;“存储”-&gt;“对象存储服务OBS”，如下图所示：</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/6469b8f4d14c4d98876992f39836d299.jpg" alt=""><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>点击“创建桶”按钮进入创建界面。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/c14e6f832b764fb6be09c94b1465cbd1.png" alt=""><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>开始创建。配置参数如下：</p><!----><!----><!----><!----></div><div><p>① 复制桶配置：不选</p><!----><!----><!----><!----></div><div><p>② 区域：华北-北京四</p><!----><!----><!----><!----></div><div><p>③ 桶名称：自定义，将在后续步骤使用</p><!----><!----><!----><!----></div><div><p>④ 数据冗余存储策略：单AZ存储</p><!----><!----><!----><!----></div><div><p>⑤ 默认存储类别：标准存储</p><!----><!----><!----><!----></div><div><p>⑥ 桶策略：私有</p><!----><!----><!----><!----></div><div><p>⑦ 默认加密：关闭</p><!----><!----><!----><!----></div><div><p>⑧ 归档数据直读：关闭</p><!----><!----><!----><!----></div><div><p>单击“立即创建”&gt;“确定”，完成桶创建。</p><!----><!----><!----><!----></div><div><p>点击创建的“桶名称”-&gt;“对象”-&gt;“新建文件夹”，创建一个文件夹，命名为<strong><font color="#c7000b">coco2017_subset</font></strong>，用于存放后续数据集。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/de28d8a075ae412bb0748bb0527434fd.png" alt=""><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div></div></div><div class="module colorSucc" id="mk_1313460"><span class="sp_skip"><a class="skip" href="javascript:;">跳过此步</a></span><div class="bz" id="bz_1313460" data-type="1"><h4>2.2 数据集下载</h4><div><p></p><!----><!----><!----><!----></div><div><p>复制并打开此链接：https://developer.huaweicloud.com/develop/aigallery/dataset/detail?id=6d7347f8-f674-4900-a5fd-d6adb158cca7</p><!----><!----><!----><!----></div><div><p>下载COCO 2017数据集子集 COCO2017_subset100。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><!----><pre style="margin-top: 20px; margin-bottom: 20px;">                        <button class="code_btn" data-clipboard-action="copy" data-clipboard-target="#code_17634921">拷贝代码</button><code id="code_17634921" class="hljs pgsql">COCO2017_subset100/
+  ├── train2017/
+  ├── val2017/
+  └── annotations/
+  	├── instances_train2017.json
+  	└── instances_val2017.json</code></pre><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>该数据集包括train（100张），val（100张）及标注文件。进入COCO2017_subset100数据集页面，点击“下载”，选择云服务区域为“华北-北京四”，点击确认。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/527d9aae510143ef9adf79808386f115.png" alt=""><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>进入下载详情页面后，下载方式选择对象存储服务（OBS），目标区域选择<font color="#c7000b">华北-北京四</font>，目标路径选择1中在OBS中创建的路径，用于数据集存储，如下图所示：</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/b90134c2fc0b43e58dd2689b88dd3f2f.png" alt=""><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>点击“确认”，跳转至我的下载页面，可以查看数据集下载详情，等待数据集下载完成，如下图所示：</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/a25022c5edb949adaa3bd58826e76be0.png" alt=""><!----><!----></div><div><p>返回Notebook页面，新建一个ipynb文件，补充以下代码，并运行，导入COCO2017_subset100数据集，运行完毕后，点击任务栏上方“刷新”按钮，即可查看导入dataset目录，如下图所示：</p><!----><!----><!----><!----></div><div><!----><!----><!----><pre style="margin-top: 20px; margin-bottom: 20px;">                        <button class="code_btn" data-clipboard-action="copy" data-clipboard-target="#code_17634935">拷贝代码</button><code id="code_17634935" class="hljs reasonml">import moxing <span class="hljs-keyword">as</span> mox
+mox.file.copy<span class="hljs-constructor">_parallel(${<span class="hljs-params">obs_path</span>},${<span class="hljs-params">notebook_path</span>})</span></code></pre><!----></div><div><p><strong>说明：</strong></p><!----><!----><!----><!----></div><div><p>${obs_path}为OBS存储数据集的位置</p><!----><!----><!----><!----></div><div><p>${notebook_path}为数据集在notebook中的存储路径<font color="#c7000b">./coco2017_subset</font>，与DINO在同级目录</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/8e50059f0b95463cb6d60b0b4d9ebc0b.png" alt=""><!----><!----></div><div><p></p><!----><!----><!----><!----></div></div></div><div class="module colorSucc" id="mk_1313470"><span class="sp_skip"><a class="skip" href="javascript:;">跳过此步</a></span><div class="bz" id="bz_1313461" data-type="1"><h4>2.3 模型下载</h4><div><p>打开terminal,输入如下命令，下载DINO model checkpoint “checkpoint0011_4scale.pth”。下载完成后，点击左侧刷新按钮，即可查看文件夹ckpts，用于存放下载的checkpoint。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><!----><pre style="margin-top: 20px; margin-bottom: 20px;">                        <button class="code_btn" data-clipboard-action="copy" data-clipboard-target="#code_17634944">拷贝代码</button><code id="code_17634944" class="hljs apache"><span class="hljs-comment"># 待换链接</span>
+<span class="hljs-attribute">wget</span> -P ckpts https://sandbox-expriment-files.obs.cn-north-<span class="hljs-number">1</span>.myhuaweicloud.com:<span class="hljs-number">443</span>/<span class="hljs-number">20221228</span>/checkpoint<span class="hljs-number">0011</span>_<span class="hljs-number">4</span>scale.pth</code></pre><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/75603a212c4b4bd8807dbbfce81d94cf.png" alt=""><!----><!----></div><div><p></p><!----><!----><!----><!----></div></div><div class="bz" id="bz_1313462" data-type="1"><h3>3 推理及可视化</h3><div><p></p><!----><!----><!----><!----></div><div><p>打开DINO目录下的inference_and_visualization.ipynb，选择Kernel Pytorch-1.8，如下图所示：</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/36eb2982d5b544338b23f88979730a9e.png" alt=""><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>按步骤运行代码查看推理结果。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/91e3f2ccd896468dbe1c3322198826ab.png" alt=""><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div></div><div class="bz" id="bz_1313463" data-type="1"><h3>4 模型部署准备</h3><div><p></p><!----><!----><!----><!----></div><div><p>在跑通DINO的推理及可视化部分后，在ModelArts服务中可以将AI模型创建为AI应用，然后将AI应用快速部署为在线推理服务，流程图如下所示：</p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/6c023d3867a04e968c0317da734c16cc.png" alt=""><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>◉ 开发模型：模型开发可以在ModelArts服务中进行，也可以在您的本地开发环境进行。</p><!----><!----><!----><!----></div><div><p>◉ 创建AI应用：把模型文件、配置文件和推理文件导入到ModelArts的模型仓库中，进行版本化管理，并构建为可运行的AI应用。</p><!----><!----><!----><!----></div><div><p>◉ 部署服务：把AI应用在资源池中部署为容器实例，注册外部可访问的推理API。</p><!----><!----><!----><!----></div><div><p>◉ 推理：在您的应用中增加对推理API的调用，在业务流程中集成AI推理能力。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div></div><div class="bz" id="bz_1313464" data-type="1"><h4>4.1 编写推理代码</h4><div><p></p><!----><!----><!----><!----></div><div><p>在Notebook-DINO路径下，创建一个名称为<font color="#c7000b">customize_service的py文件</font>，参考inference_and_visualization.ipynb编写推理代码,可参照<strong>模型推理代码编写说明</strong>：https://support.huaweicloud.com/inference-modelarts/inference-modelarts-0057.html</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/61cd90a8ee9e4f68948ae8b27d6ea055.png" alt=""><!----><!----></div></div><div class="bz" id="bz_1313465" data-type="1"><p class="h5">4.1.1 导包</p><div><p>1) 在模型代码推理文件“customize_service.py”中，需要添加一个子类，该子类继承对应模型PyTorch类型的父类PTServingBaseService,导入语句如下所示:</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><!----><pre style="margin-top: 20px; margin-bottom: 20px;">                        <button class="code_btn" data-clipboard-action="copy" data-clipboard-target="#code_17634973">拷贝代码</button><code id="code_17634973" class="hljs angelscript"><span class="hljs-keyword">from</span> model_service.pytorch_model_service <span class="hljs-keyword">import</span> PTServingBaseService</code></pre><!----></div><div><p>2) 参考inference_and_visualization.ipynb，将推理所需包导入到customize_service.py中</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><!----><pre style="margin-top: 20px; margin-bottom: 20px;">                        <button class="code_btn" data-clipboard-action="copy" data-clipboard-target="#code_17634976">拷贝代码</button><code id="code_17634976" class="hljs elm"><span class="hljs-keyword">import</span> os
+<span class="hljs-keyword">import</span> torch
+<span class="hljs-keyword">import</span> json
+<span class="hljs-title">from</span> io <span class="hljs-keyword">import</span> BytesIO
+<span class="hljs-title">from</span> collections <span class="hljs-keyword">import</span> OrderedDict
+<span class="hljs-title">from</span> <span class="hljs-type">PIL</span> <span class="hljs-keyword">import</span> Image
+<span class="hljs-title">from</span> util.slconfig <span class="hljs-keyword">import</span> SLConfig
+<span class="hljs-title">from</span> main <span class="hljs-keyword">import</span> build_model_main
+<span class="hljs-title">from</span> util <span class="hljs-keyword">import</span> box_ops
+<span class="hljs-keyword">import</span> datasets.transforms <span class="hljs-keyword">as</span> T</code></pre><!----></div></div><div class="bz" id="bz_1313466" data-type="1"><p class="h5">4.1.2 重写方法</p><div><p></p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/0814c9b2d2ad4ee187ea62766d9ef506.png" alt=""><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>1) 重写初始化方法</p><!----><!----><!----><!----></div><div><p>此方法用于初始化和加载预训练模型。首先需要构建一个类，这个类应当继承PTServingBaseService，且需定义模型配置文件路径及模型路径，并加载配置文件中的参数信息及coco名称等操作。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><!----><pre style="margin-top: 20px; margin-bottom: 20px;">                        <button class="code_btn" data-clipboard-action="copy" data-clipboard-target="#code_17634983">拷贝代码</button><code id="code_17634983" class="hljs lua">class CustomizeService(PTServingBaseService):
+    def __init__(<span class="hljs-built_in">self</span>, model_name, model_path):
+
+        root = <span class="hljs-built_in">os</span>.<span class="hljs-built_in">path</span>.dirname(<span class="hljs-built_in">os</span>.<span class="hljs-built_in">path</span>.abspath(__file__))
+        model_config_path = <span class="hljs-built_in">os</span>.<span class="hljs-built_in">path</span>.join(root, <span class="hljs-string">"config/DINO/DINO_4scale.py"</span>)
+        model_checkpoint_path = <span class="hljs-built_in">os</span>.<span class="hljs-built_in">path</span>.join(root, <span class="hljs-string">"ckpts/checkpoint0011_4scale.pth"</span>)
+        <span class="hljs-built_in">self</span>.model_config_path = model_config_path
+        <span class="hljs-built_in">self</span>.model_checkpoint_path = model_checkpoint_path
+
+        args = SLConfig.fromfile(<span class="hljs-built_in">self</span>.model_config_path)
+        args.device = <span class="hljs-string">'cuda'</span> <span class="hljs-keyword">if</span> torch.cuda.is_available() <span class="hljs-keyword">else</span> <span class="hljs-string">'cpu'</span>
+
+        <span class="hljs-built_in">self</span>.model, criterion, <span class="hljs-built_in">self</span>.postprocessors = build_model_main(args)
+        checkpoint = torch.<span class="hljs-built_in">load</span>(<span class="hljs-built_in">self</span>.model_checkpoint_path, map_location=<span class="hljs-string">'cpu'</span>)
+        <span class="hljs-built_in">self</span>.model.load_state_dict(checkpoint[<span class="hljs-string">'model'</span>])
+        _ = <span class="hljs-built_in">self</span>.model.eval()
+
+        # <span class="hljs-built_in">load</span> coco names
+        jsonfile = <span class="hljs-built_in">os</span>.<span class="hljs-built_in">path</span>.join(root,<span class="hljs-string">"util/coco_id2name.json"</span>)
+        with <span class="hljs-built_in">open</span>(jsonfile) as f:
+            id2name = json.<span class="hljs-built_in">load</span>(f)
+            <span class="hljs-built_in">self</span>.id2name = {int(k): v <span class="hljs-keyword">for</span> k, v <span class="hljs-keyword">in</span> id2name.items()}
+        <span class="hljs-built_in">self</span>.transform = T.Compose([
+            T.RandomResize([<span class="hljs-number">800</span>], max_size=<span class="hljs-number">1333</span>),
+            T.ToTensor(),
+            T.Normalize([<span class="hljs-number">0.485</span>, <span class="hljs-number">0.456</span>, <span class="hljs-number">0.406</span>], [<span class="hljs-number">0.229</span>, <span class="hljs-number">0.224</span>, <span class="hljs-number">0.225</span>])
+        ])
+        <span class="hljs-built_in">self</span>.resize_scale = <span class="hljs-number">0.0</span>
+        <span class="hljs-built_in">self</span>.image = None</code></pre><!----></div><div><p></p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>2) 重写预处理方法</p><!----><!----><!----><!----></div><div><p>此方法对自定义图像进行预处理，实际推理请求方法和后处理方法中的接口传入“data”当前支持两种content-type，即“multipart/form-data”和“application/json”。此处定义传入参数data为multipart/form-data类型。</p><!----><!----><!----><!----></div><div><p>首先加载图片，将其转换为RGB格式的图片，接着对图像进行预处理，将PIL图像随机调整为形状列表中的目标大小,将PIL图像转换为tensor,最后用平均值和标准偏差归一化张量图像。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><!----><pre style="margin-top: 20px; margin-bottom: 20px;">                        <button class="code_btn" data-clipboard-action="copy" data-clipboard-target="#code_17634990">拷贝代码</button><code id="code_17634990" class="hljs sqf">def <span class="hljs-variable">_preprocess</span>(self, data):
+    preprocessed_data = {}
+    <span class="hljs-keyword">for</span> k, v <span class="hljs-built_in">in</span> data.<span class="hljs-built_in">items</span>():  <span class="hljs-meta"># k的取值固定为<span class="hljs-meta-string">'images'</span></span>
+        <span class="hljs-keyword">for</span> file_name, file_content <span class="hljs-built_in">in</span> v.<span class="hljs-built_in">items</span>():
+            <span class="hljs-built_in">image</span> = <span class="hljs-built_in">Image</span>.open(file_content).convert(<span class="hljs-string">"RGB"</span>)
+            long_side = <span class="hljs-built_in">max</span>(<span class="hljs-built_in">image</span>.<span class="hljs-built_in">size</span>)
+            <span class="hljs-meta"># transform images</span>
+            self.<span class="hljs-built_in">image</span>, _ = self.transform(<span class="hljs-built_in">image</span>, None)
+            self.resize_scale = <span class="hljs-built_in">max</span>(self.<span class="hljs-built_in">image</span>.<span class="hljs-built_in">size</span>()) / float(long_side)
+            preprocessed_data[k] = self.<span class="hljs-built_in">image</span>
+    return preprocessed_data</code></pre><!----></div><div><p>3) 重写推理方法</p><!----><!----><!----><!----></div><div><p>传入处理过的图片数据进入模型，return得分，标签及位置信息。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><!----><pre style="margin-top: 20px; margin-bottom: 20px;">                        <button class="code_btn" data-clipboard-action="copy" data-clipboard-target="#code_17634994">拷贝代码</button><code id="code_17634994" class="hljs lua">def _inference(<span class="hljs-built_in">self</span>, data):
+    image = data[<span class="hljs-string">"images"</span>]
+    # predict images
+    <span class="hljs-built_in">output</span> = <span class="hljs-built_in">self</span>.model.cuda()(image[None].cuda())
+    <span class="hljs-built_in">output</span> = <span class="hljs-built_in">self</span>.postprocessors[<span class="hljs-string">'bbox'</span>](<span class="hljs-built_in">output</span>, torch.Tensor(<span class="hljs-string">[[1.0, 1.0]]</span>).cuda())[<span class="hljs-number">0</span>]
+    # <span class="hljs-built_in">print</span>(<span class="hljs-built_in">output</span>)
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">output</span></code></pre><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>输出output结构如下：</p><!----><!----><!----><!----></div><div><!----><!----><!----><pre style="margin-top: 20px; margin-bottom: 20px;">                        <button class="code_btn" data-clipboard-action="copy" data-clipboard-target="#code_17634997">拷贝代码</button><code id="code_17634997" class="hljs json">{
+<span class="hljs-attr">"scores"</span>:tensor([<span class="hljs-number">0.6153</span>, <span class="hljs-number">0.6056</span>, <span class="hljs-number">0.5966</span>, ...]),
+<span class="hljs-attr">"labels"</span>:tensor([<span class="hljs-number">72</span>, <span class="hljs-number">64</span>, <span class="hljs-number">64</span>, ...]),
+<span class="hljs-attr">"boxes"</span>:tensor([[<span class="hljs-number">0.7530</span>, <span class="hljs-number">0.3022</span>, <span class="hljs-number">0.9996</span>, <span class="hljs-number">0.5029</span>], [], ...)
+}</code></pre><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>4) 重写后处理方法</p><!----><!----><!----><!----></div><div><p>此方法对推理输出的数据进行后处理操作，设置阈值对得分及边框进行筛选，去掉多余的boxes，并对坐标信息进行处理。推理结果以“JSON”体的形式返回，detection_classes是每个检测框的标签，detection_boxes是每个检测框的四点坐标（y_min,x_min,y_max,x_max），detection_scores是每个检测框的置信度。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><!----><pre style="margin-top: 20px; margin-bottom: 20px;">                        <button class="code_btn" data-clipboard-action="copy" data-clipboard-target="#code_17635002">拷贝代码</button><code id="code_17635002" class="hljs prolog">def <span class="hljs-symbol">_postprocess</span>(self, data):
+    thershold = <span class="hljs-number">0.3</span>  # set a thershold
+    scores = data[<span class="hljs-string">'scores'</span>]
+    labels = data[<span class="hljs-string">'labels'</span>]
+    boxes = box_ops.box_xyxy_to_cxcywh(data[<span class="hljs-string">'boxes'</span>])
+    select_mask = scores &gt; thershold
+    box_label = [self.id2name[int(item)] for item in labels[select_mask]]
+    pred_dict = {
+        <span class="hljs-string">'boxes'</span>: boxes[select_mask],
+        <span class="hljs-string">'size'</span>: torch.<span class="hljs-symbol">Tensor</span>([self.image.shape[<span class="hljs-number">1</span>], self.image.shape[<span class="hljs-number">2</span>]]),
+        <span class="hljs-string">'box_label'</span>: box_label
+    }
+
+    <span class="hljs-symbol">H</span>, <span class="hljs-symbol">W</span> = pred_dict[<span class="hljs-string">'size'</span>].tolist()
+    polygons = []
+    for box in pred_dict[<span class="hljs-string">'boxes'</span>].cpu():
+        unnormbbox = box * torch.<span class="hljs-symbol">Tensor</span>([<span class="hljs-symbol">W</span>, <span class="hljs-symbol">H</span>, <span class="hljs-symbol">W</span>, <span class="hljs-symbol">H</span>])
+        unnormbbox[:<span class="hljs-number">2</span>] -= unnormbbox[<span class="hljs-number">2</span>:] / <span class="hljs-number">2</span>
+        unnormbbox /= self.resize_scale
+        [bbox_x, bbox_y, bbox_w, bbox_h] = unnormbbox.tolist()
+        polygons.append([int(bbox_y), int(bbox_x), int(bbox_y + bbox_h), int(bbox_x + bbox_w)])  # 坐标顺序[ y1, x1, y2, x2]
+    
+    result = <span class="hljs-symbol">OrderedDict</span>()
+    result[<span class="hljs-string">'detection_classes'</span>] = box_label
+    result[<span class="hljs-string">'detection_scores'</span>] = [round(v, <span class="hljs-number">4</span>) for v in scores[select_mask].tolist()]
+    result[<span class="hljs-string">'detection_boxes'</span>] = polygons
+    
+    return result</code></pre><!----></div><div><p>编写完推理脚本后，点CRTL+S进行保存。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div></div><div class="bz" id="bz_1313467" data-type="1"><h4>4.2 模型打包</h4><div><p>在2.2中创建的ipynb文件中，新增一个cell，复制以下代码，将推理代码及模型文件打包到指定目录下。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><!----><pre style="margin-top: 20px; margin-bottom: 20px;">                        <button class="code_btn" data-clipboard-action="copy" data-clipboard-target="#code_17635007">拷贝代码</button><code id="code_17635007" class="hljs xquery"><span class="hljs-keyword">import</span> shutil
+<span class="hljs-keyword">import</span> os
+
+def copy_data(src_dir, dst_dir):
+    <span class="hljs-string">"""
+    复制src_dir源文件目录下的所有内容到dst_dir目标目录
+    """</span>
+    <span class="hljs-keyword">if</span><span class="hljs-built_in"> not</span> os<span class="hljs-built_in">.path</span><span class="hljs-built_in">.exists</span>(dst_dir):
+        os.makedirs(dst_dir)
+    <span class="hljs-keyword">if</span> os<span class="hljs-built_in">.path</span><span class="hljs-built_in">.exists</span>(src_dir):
+        <span class="hljs-keyword">for</span> <span class="hljs-type">item</span> <span class="hljs-keyword">in</span> os.listdir(src_dir):
+            fp = os<span class="hljs-built_in">.path</span>.join(src_dir, <span class="hljs-type">item</span>)
+            dst_path = os<span class="hljs-built_in">.path</span>.join(dst_dir, <span class="hljs-type">item</span>)
+            <span class="hljs-keyword">if</span><span class="hljs-built_in"> not</span> <span class="hljs-type">item</span>.startswith(<span class="hljs-string">'.'</span>):
+                <span class="hljs-keyword">if</span> os<span class="hljs-built_in">.path</span>.isfile(os<span class="hljs-built_in">.path</span>.join(src_dir, <span class="hljs-type">item</span>)):
+                    shutil.<span class="hljs-keyword">copy</span>(fp, dst_path)
+                else:
+                    copy_data(fp, dst_path)
+
+source_path = <span class="hljs-string">"DINO"</span>
+target_path  = <span class="hljs-string">"/home/ma-user/infer/model/1"</span> 
+copy_data(source_path,target_path)</code></pre><!----></div></div><div class="bz" id="bz_1313468" data-type="1"><h4>4.3 本地调用</h4><div><p>打开terminal，输入以下命令，切换到infer路径下，启动本地推理代码</p><!----><!----><!----><!----></div><div><!----><!----><!----><pre style="margin-top: 20px; margin-bottom: 20px;">                        <button class="code_btn" data-clipboard-action="copy" data-clipboard-target="#code_17635009">拷贝代码</button><code id="code_17635009" class="hljs stata"><span class="hljs-keyword">cd</span> ~/infer
+<span class="hljs-keyword">sh</span> <span class="hljs-keyword">run</span>.<span class="hljs-keyword">sh</span></code></pre><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/43a14d3cf7374ceb8bf1ef7a4ca6dd05.png" alt=""><!----><!----></div><div><p>此时点击右上角新建按钮，新开一个terminal</p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/cb376963aa034d9f9ff738fa27156e48.png" alt=""><!----><!----></div><div><p>在新建的terminal中输入以下命令，通过传入本地图片调用测试推理代码进行推理验证。</p><!----><!----><!----><!----></div><div><!----><!----><!----><pre style="margin-top: 20px; margin-bottom: 20px;">                        <button class="code_btn" data-clipboard-action="copy" data-clipboard-target="#code_17635015">拷贝代码</button><code id="code_17635015" class="hljs awk">curl -kv -F <span class="hljs-string">'images=@/home/ma-user/infer/model/1/figs/idea.jpg'</span> -X POST http:<span class="hljs-regexp">//</span><span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">8080</span>/</code></pre><!----></div><div><p>推理结果如下，返回图像的标签，尺寸以及边框的位置信息。</p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/098c4e710da442a684a58791ef1b4305.png" alt=""><!----><!----></div><div><p></p><!----><!----><!----><!----></div></div><div class="bz" id="bz_1313469" data-type="1"><h4>4.4 保存镜像</h4><div><p>步骤1中通过预置的镜像创建Notebook实例，在基础镜像上安装对应的自定义软件和依赖，并在管理页面上进行操作，进而完成将运行的实例环境以容器镜像的方式保存下来。保存的镜像中，安装的依赖包不会丢失，但持久化存储的部分（home/ma-user/work目录的内容）不会保存在最终产生的容器镜像中。</p><!----><!----><!----><!----></div><div class="push_box"><div class="question-push noselect"><h3>须知</h3><div class="question-content"><h4>须知</h4><p>快照中耗费的时间仍占用实例的总运行时长，若在快照中时，实例因运行时间到期停止，将导致镜像保存失败。</p></div></div></div><div><p></p><!----><!----><!----><!----></div><div><p>1.复制以下链接：https://console.huaweicloud.com/modelarts/?region=cn-north-4#/dev-container</p><!----><!----><!----><!----></div><div><p>返回Notebook列表。或在ModelArts左侧菜单栏中选择“开发环境 &gt; Notebook”，进入新版Notebook管理页面。</p><!----><!----><!----><!----></div><div><p>2.在Notebook列表中，对于要保存的Notebook实例，单击右侧“操作”列中的“更多 &gt; 保存镜像”，进入“保存镜像”对话框。</p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/62fc4b44ec8d4d42953454e61af3561f.png" alt=""><!----><!----></div><div><p>3.在保存镜像对话框中，设置组织、镜像名称、镜像版本和描述信息。单击“确认”保存镜像。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/9d13ffcf56a4409bbc0b95250e36217a.png" alt=""><!----><!----></div><div><p>在“组织”下拉框中选择一个组织。如果没有组织，可以单击右侧的“立即创建”，创建一个组织。创建组织的详细操作请参见——<strong>创建组织：</strong>https://support.huaweicloud.com/usermanual-swr/swr_01_0014.html#section0</p><!----><!----><!----><!----></div><div><p>同一个组织内的用户可以共享使用该组织内的所有镜像。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>4.镜像会以快照的形式保存，保存过程约5分钟，请耐心等待。此时不可再操作实例（对于打开的JupyterLab界面和本地IDE 仍可操作）。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/df4b06b4d7b5430a89a6144bf05edb85.png" alt=""><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p><strong>须知：</strong>快照中耗费的时间仍占用实例的总运行时长，若在快照中时，实例因运行时间到期停止，将导致镜像保存失败。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>5.镜像保存成功后，实例状态变为“<strong>运行中</strong>”，用户可在“镜像管理”页面查看到该镜像详情。</p><!----><!----><!----><!----></div><div><p>6.单击镜像的名称，进入镜像详情页，可以查看镜像版本/ID，状态，资源类型，镜像大小，SWR地址等。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div></div><div class="bz" id="bz_1313470" data-type="1"><h3>5 创建AI应用并部署成在线服务</h3><div><p></p><!----><!----><!----><!----></div><div><p>点击左侧“AI应用管理 &gt;AI应用 &gt;我的AI应用”，点击“创建”</p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/05847fb202cd4b489f178984754b51c3.png" alt=""><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>配置参数参考下图：</p><!----><!----><!----><!----></div><div><p><strong>名称：自定义，如model-dino</strong></p><!----><!----><!----><!----></div><div><p><strong>版本：</strong>默认</p><!----><!----><!----><!----></div><div><p><strong>元模型来源：</strong>从容器镜像中选择</p><!----><!----><!----><!----></div><div><p><strong>容器镜像所在的路径：</strong>点击右侧文件图标，选择保存的镜像及版本</p><!----><!----><!----><!----></div><div><p><strong>容器调用接口：</strong>HTTPS，端口号8443</p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/eb14cb6f6ed84b87ab65da820ac0b667.png" alt=""><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/7f873b1035b3485fb46c31c6e2b7fc49.png" alt=""><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/bf0d581266d242a6a87a7f78ce5bfa04.png" alt=""><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p><strong>部署类型：</strong>在线服务</p><!----><!----><!----><!----></div><div><p><strong>启动命令：</strong><strong>sh /home/ma-user/infer/run.sh</strong></p><!----><!----><!----><!----></div><div><p><strong>apis定义：</strong>开启，并在下方编辑apis,编辑完成后，点击保存，完成apis定义。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>apis定义为json数组格式，应包含以下字段：</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><!----><pre style="margin-top: 20px; margin-bottom: 20px;">                        <button class="code_btn" data-clipboard-action="copy" data-clipboard-target="#code_17635065">拷贝代码</button><code id="code_17635065" class="hljs xl"><span class="hljs-function"><span class="hljs-title">url</span>      --&gt;</span>	请求路径，如未填默认“/”
+<span class="hljs-function"><span class="hljs-title">method</span>   --&gt;</span>	请求方法，如未填默认“post”
+<span class="hljs-function"><span class="hljs-title">request</span>	 --&gt;</span>  请求体参数和类型定义
+<span class="hljs-function"><span class="hljs-title">response</span> --&gt;</span>  返回体参数和类型定义</code></pre><!----></div><div><p>request及response字段Content-type定义为multipart/form-data类型；request请求体传入参数为一张图片，response响应体输出为图像的标签，尺寸以及边框的位置信息。详细请查看[模型配置文件说明](https://support.huaweicloud.com/zh-cn/inference-modelarts/inference-modelarts-0056.html)。</p><!----><!----><!----><!----></div><div><p>apis配置参考如下：</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><!----><pre style="margin-top: 20px; margin-bottom: 20px;">                        <button class="code_btn" data-clipboard-action="copy" data-clipboard-target="#code_17635069">拷贝代码</button><code id="code_17635069" class="hljs json">[{
+    <span class="hljs-attr">"url"</span>: <span class="hljs-string">"/"</span>,
+    <span class="hljs-attr">"method"</span>: <span class="hljs-string">"post"</span>,
+    <span class="hljs-attr">"request"</span>: {
+        <span class="hljs-attr">"Content-type"</span>: <span class="hljs-string">"multipart/form-data"</span>,
+        <span class="hljs-attr">"data"</span>: {
+            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"object"</span>,
+            <span class="hljs-attr">"properties"</span>: {
+                <span class="hljs-attr">"images"</span>: {
+                    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"file"</span>
+                }
+            }
+        }
+    },
+    <span class="hljs-attr">"response"</span>: {
+        <span class="hljs-attr">"Content-type"</span>: <span class="hljs-string">"multipart/form-data"</span>,
+        <span class="hljs-attr">"data"</span>: {
+            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"object"</span>,
+            <span class="hljs-attr">"properties"</span>: {
+                <span class="hljs-attr">"detection_boxes"</span>: {
+                    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"list"</span>,
+                    <span class="hljs-attr">"items"</span>: [{
+                        <span class="hljs-attr">"type"</span>: <span class="hljs-string">"list"</span>,
+                        <span class="hljs-attr">"minItems"</span>: <span class="hljs-number">4</span>,
+                        <span class="hljs-attr">"maxItems"</span>: <span class="hljs-number">4</span>,
+                        <span class="hljs-attr">"items"</span>: [{
+                            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"number"</span>
+                        }]
+                    }]
+                },
+                <span class="hljs-attr">"detection_scores"</span>: {
+                    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"list"</span>,
+                    <span class="hljs-attr">"items"</span>: [{
+                        <span class="hljs-attr">"type"</span>: <span class="hljs-string">"number"</span>
+                    }]
+                },
+                <span class="hljs-attr">"detection_classes"</span>: {
+                    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"list"</span>,
+                    <span class="hljs-attr">"items"</span>: [{
+                        <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>
+                    }]
+                }
+            }
+        }
+    }
+}]</code></pre><!----></div><div><p></p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>点击“立即创建”，等待AI应用状态由“构建中”变为“正常”，表示应用构建完成。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/e0ccbd0db8ac4b0fac917866a1686bcb.png" alt=""><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>AI应用创建成功后，返回AI应用列表，选择上步创建的AI应用，将AI应用快速部署为Web Service，并且提供在线的测试UI与监控功能。</p><!----><!----><!----><!----></div><div><p>点击左侧下拉按钮，在操作栏选择“部署”-&gt;“在线服务”</p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/8dd25a17ef1f4704a3add76d982feb37.png" alt=""><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>在“部署”页面，参考如下说明填写关键参数。</p><!----><!----><!----><!----></div><div><p>“名称”：<font color="#c7000b">service-dino</font></p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>“资源池”：选择“公共资源池”</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>“选择AI应用及配置”：“AI应用”及“版本”会自动选择前面导入的模型</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>“计算节点规格”：GPU:1*P4(8G)|CPU:8核32G</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>其他参数可使用默认值。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/818f59fa62b34efd8ec026e1a95cb57e.png" alt=""><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>参数设置完成后，单击“下一步”，根据界面提示，点击“提交”，完成在线服务的部署。</p><!----><!----><!----><!----></div><div><p>您可以进入“在线服务列表”页面，等待服务部署结束，当服务状态变为运行中时，表示服务部署成功。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div></div></div><div class="module colorSucc" id="mk_1313471"><span class="sp_skip"><a class="skip" href="javascript:;">跳过此步</a></span><div class="bz" id="bz_1313471" data-type="1"><h3>6 使用在线服务预测图片</h3><div><p>在线服务部署完成后，您可以单击服务名称进入服务详情页。下载测试图片</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>测试图片下载地址：https://sandbox-expriment-files.obs.cn-north-1.myhuaweicloud.com:443/20221228/idea.jpg</p><!----><!----><!----><!----></div><div><p>下载完成后，单击在线服务部署页面“预测”页签，点击“上传”，选择进行预测。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/d0b34456fbc04db6988615bca389eb54.png" alt=""><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div></div><div class="bz" id="bz_1313472" data-type="1"><h3>7 添加模型版本进行灰度发布（选做）</h3><div><p>ModelArts提供多版本支持和灵活的流量策略，您可以通过使用灰度发布，实现模型版本的平滑过渡升级。修改服务部署新版本模型或者切换模型版本时，原服务预测API不会变化。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p>调整模型版本的操作可以参考如下的步骤。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><p><strong>前提条件</strong></p><!----><!----><!----><!----></div><div><p>1.已存在部署完成的服务。</p><!----><!----><!----><!----></div><div><p>2.已完成模型调整，同步骤5操作，完成AI应用新版本的创建。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/080e1ec1b5f64506b49428350772f3ea.png" alt=""><!----><!----></div><div><p><strong>操作步骤</strong></p><!----><!----><!----><!----></div><div><p>1.登录ModelArts管理控制台，在左侧导航栏中选择“部署上线 &gt; 在线服务”，默认进入“在线服务”列表。</p><!----><!----><!----><!----></div><div><p>2.在部署完成的目标服务中，单击操作列的“修改”，进入“修改服务”页面。</p><!----><!----><!----><!----></div><div><p>3.在选择模型及配置中，单击“<strong>增加模型版本进行灰度发布</strong>”添加新版本。</p><!----><!----><!----><!----></div><div><p></p><!----><!----><!----><!----></div><div><!----><!----><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/b5649f9ef8eb490d815d183f729c418d.png" alt=""><!----><!----></div><div><p>4.设置当前实例节点的流量占比，服务调用请求根据该比例分配到当前版本上。</p><!----><!----><!----><!----></div><div><p>如您仅部署一个版本的AI应用，请设置为100%。如您添加多个版本进行灰度发布，多个版本分流之和设置为100%。</p><!----><!----><!----><!----></div><div><p>您可以设置两个版本的流量占比，服务调用请求根据该比例分配。规格P4，其他参数默认即可。完成设置后，单击下一步。</p><!----><!----><!----><!----></div><div><p>5.确认信息无误后，单击“提交”部署在线服务。</p><!----><!----><!----><!----></div></div></div></div></div></div></div><div class="questions_box con" id="qr" style="display: none;"><div class="questions_center" id="questions_center"><!----><div class="chatList" id="chatList"></div><div class="bottom_box"><div class="bottom_questions"><p>相关问题</p><ul></ul></div><div class="bottom"><textarea id="textarea" name="content" maxlength="100" placeholder="请描述您的问题"></textarea><input type="button" name="send" id="send" maxlength="100" lang="zh" value="发送"></div></div></div></div><div class="report_box con" id="tab-report" username="wWX1039142" style="display: none;"><div class="report-container"><div class="report-content"><p class="test-tag">线下AI模型迁移ModelArts部署</p><h2 class="author"><span class="report-name">wWX1039142</span><span class="report-grade"></span><span class="report-time">2024 - 06 - 20</span></h2><div class="tag-details"><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/tag-details.37d372ac.svg" alt="" class="title-map"><span class="tag">实验内容</span><div class="tag-content test-content">通过云上快速调试，编写推理代码，保存自定义镜像方式进行AI应用的创建，并部署成华为云在线服务，方便调用。</div></div><div class="tag-target"><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/tag-target.22422847.svg" alt="" class="title-map"><span class="tag">实验目标</span><div class="tag-content test-target">1.在华为云notebook快速调试开源代码<br>2.编写及调试推理代码<br>3.保存自定义镜像<br>4.创建AI应用并部署上线<br>5.添加模型版本进行灰度发布</div></div><div class="tag-state"><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/tag-state.8a18092c.svg" alt="" class="title-map"><span class="tag">完成状态</span><table class="finish-tabel"><thead><tr><th></th><th></th><th></th></tr></thead><tfoot><tr><td></td><td></td><td></td></tr></tfoot><tbody><tr><td data-id="1313457">1</td><td>操作前提：登录华为云<br>1 环境准备<br></td><td>已完成</td></tr><tr><td data-id="1313459">2</td><td>2 数据准备<br>2.1 创建桶<br></td><td>已完成</td></tr><tr><td data-id="1313460">3</td><td>2.2 数据集下载<br></td><td>已完成</td></tr><tr><td data-id="1313470">4</td><td>2.3 模型下载<br>3 推理及可视化<br>4 模型部署准备<br>4.1 编写推理代码<br>4.1.1 导包<br>4.1.2 重写方法<br>4.2 模型打包<br>4.3 本地调用<br>4.4 保存镜像<br>5 创建AI应用并部署成在线服务<br></td><td>已完成</td></tr><tr><td data-id="1313471">5</td><td>6 使用在线服务预测图片<br>7 添加模型版本进行灰度发布（选做）<br></td><td>已完成</td></tr></tbody></table></div><div class="tag-issue"><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/tag-issue.f34b8068.svg" alt="" class="title-map"><span class="tag">问题列表</span><table class="question-tabel"><thead><tr><th></th><th></th><th></th><th></th></tr></thead><tfoot><tr><td></td><td></td><td></td><td></td></tr></tfoot><tbody></tbody></table></div><div class="tag-record"><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/tag-record.88e1c7c6.svg" alt="" class="title-map"><span class="tag">过程记录</span><table class="course-tabel"><thead><tr><th></th><th></th><th></th><th></th></tr></thead><tfoot><tr><td></td><td></td><td></td><td></td></tr></tfoot><tbody></tbody></table></div></div></div><!----></div></div></div><div class="r_test_box" id="r_test_box"><div class="test_head"><span class="test_title" id="test_title">线下AI模型迁移ModelArts部署</span><div class="test_head_right"><ul class="test_head_right_list"><li class="end"><button type="btn" class="end_btn">结束实验</button></li><li class="delayed" style=""><button ref_key="_ref" class="el-button el-button--btn delayed_btn" aria-disabled="false" type="button"><!--v-if--><span class="">延时</span></button></li><li class="timekeeping"><span class="titme"><strong id="hour_show">00 : </strong><strong id="minute_show">24 : </strong><strong id="second_show">52</strong></span></li><li class="schedule_bar"><div class="bar_box"><div class="actual" style="width: 100%;"></div></div><span class="bar_box_number">已完成100 %</span></li></ul></div></div><div class="test_mian"><div class="test_mian_left"><ul class="test_list"><li class="topology" index="0"><i class="icon_1" style="background-position: center center; background-repeat: no-repeat; background-image: url(&quot;https://lab.huaweicloud.com/images/tuopo.svg&quot;);"></i><span class="icon_title">实验拓扑</span></li><li class="t_present topology" index="1"><i class="icon_1" style="background-position: center center; background-repeat: no-repeat; background-image: url(&quot;https://lab.huaweicloud.com/images/sy.svg&quot;);"></i><span class="icon_title">实验操作桌面</span></li></ul><div class="shadow"><div class="shrink"><img src="./线下AI模型迁移ModelArts部署实验-华为云_files/shrink_01.c55554f9.svg" class="shrink_key"><!----></div></div><div class="test_presetList_mask" style="display: none;"><div class="test_presetList"></div></div></div><div class="mian_loing" id="mian_loing" style="display: none;"><img class="schedule_dev mian_gif" src="./线下AI模型迁移ModelArts部署实验-华为云_files/loading_new.a5dc94ac.gif"><p class="loading_text">实验环境准备中...</p></div><div class="test_mian_content" id="topo_box" style=""><iframe src="./线下AI模型迁移ModelArts部署实验-华为云_files/ff8b6fc0980e42a1af3a50ecd1f81585.svg" frameborder="0" id="0_ContentFrame" class="iframe" style="position: absolute; top: 1500px; left: 0px; z-index: -1;"></iframe><div><img id="screenshot" class="screenshot-placeholder" style="display: block;"></div><iframe id="1_ContentFrame" class="content-frame" src="./线下AI模型迁移ModelArts部署实验-华为云_files/getToken.html" frameborder="0" style="position: relative; top: -3px; left: 0px; z-index: 1; display: block;"></iframe></div><div class="test_mian_right"><ul class="toolbar_list"><li class="magnify" id="magnify"><i class="full_screen l"></i><span class="toolbar_title iconfont">切换全屏</span></li><li class="mini_screen" style="display: none;"><i class="shrinkk l"></i><span class="toolbar_title iconfont">退出全屏</span></li><li id="_copy"><i class="copy l"></i><span class="copy_title iconfont">复制粘贴</span></li><li id="_screenshot" style=""><i class="screenshot l"></i><span class="screenshot_title iconfont">过程记录</span></li><li id="shareid"><i class="share l"></i><span class="share_title iconfont">屏幕共享</span></li><li id="vovice_guide"><i class="vovice_guide l"></i><span class="guide_title iconfont">新手引导</span></li></ul><img class="warning" src="./线下AI模型迁移ModelArts部署实验-华为云_files/war.02f7da7c.svg"></div></div></div><div class="share_page" id="share_page" style="display: none;"><div class="share_titel" id="share_titel"><span class="desktop" lang="zh">共享桌面</span><span class="share_close">×</span></div><div class="read"><span class="symbol"></span><span class="pattern" lang="zh">远程桌面共享</span><p lang="zh">您的好友可通过下方链接，旁观您的实验操作过程 <span class="copy_url" id="copy_url_1">复制成功</span></p><input class="read_url" id="read_url" data-clipboard-action="copy" data-clipboard-target="#read_url" readonly=""></div><div class="write"><span class="symbol"></span><span class="pattern" lang="zh">远程桌面控制</span><p lang="zh">您的好友可通过下方链接，操控您的实验环境，协助您完成实验<span class="copy_url" id="copy_url_2">复制成功</span></p><input class="write_url" id="write_url" data-clipboard-action="copy" data-clipboard-target="#write_url" readonly=""></div></div><div class="Copy_Paste" style="display: none;"><div class="Paste_title" id="Paste_title"><span class="title_text">复制 粘贴</span><span class="title_close">×</span></div><p class="clip_title"><span class="diamonds"></span><span class="topic">剪贴板</span></p><ul class="clipboard_content"><li data-lang-token="clipboard-in">如果需要从本地复制内容粘贴到服务器上，可以把本地的内容先复制到下面的输入框中，然后在服务器上进行粘贴的操作。</li><li data-lang-token="clipboard-out">如果需要从服务器上复制内容出来，同样可以将服务器上内容复制到输入框中，再从输入框中复制内容到本地。</li><!----></ul><input type="hidden" name="" id="Paste_frame" value="5 \u521b\u5efaAI\u5e94\u7528\u5e76\u90e8\u7f72\u6210\u5728\u7ebf\u670d\u52a1
+\u70b9\u51fb\u5de6\u4fa7\u201cAI\u5e94\u7528\u7ba1\u7406 &gt;AI\u5e94\u7528 &gt;\u6211\u7684AI\u5e94\u7528\u201d\uff0c\u70b9\u51fb\u201c\u521b\u5efa\u201d
+
+
+\u914d\u7f6e\u53c2\u6570\u53c2\u8003\u4e0b\u56fe\uff1a
+
+\u540d\u79f0\uff1a\u81ea\u5b9a\u4e49\uff0c\u5982model-dino
+
+\u7248\u672c\uff1a\u9ed8\u8ba4
+
+\u5143\u6a21\u578b\u6765\u6e90\uff1a\u4ece\u5bb9\u5668\u955c\u50cf\u4e2d\u9009\u62e9
+
+\u5bb9\u5668\u955c\u50cf\u6240\u5728\u7684\u8def\u5f84\uff1a\u70b9\u51fb\u53f3\u4fa7\u6587\u4ef6\u56fe\u6807\uff0c\u9009\u62e9\u4fdd\u5b58\u7684\u955c\u50cf\u53ca\u7248\u672c
+
+\u5bb9\u5668\u8c03\u7528\u63a5\u53e3\uff1aHTTPS\uff0c\u7aef\u53e3\u53f78443
+
+
+
+
+\u90e8\u7f72\u7c7b\u578b\uff1a\u5728\u7ebf\u670d\u52a1
+
+\u542f\u52a8\u547d\u4ee4\uff1ash /home/ma-user/infer/run.sh
+
+apis\u5b9a\u4e49\uff1a\u5f00\u542f\uff0c\u5e76\u5728\u4e0b\u65b9\u7f16\u8f91apis,\u7f16\u8f91\u5b8c\u6210\u540e\uff0c\u70b9\u51fb\u4fdd\u5b58\uff0c\u5b8c\u6210apis\u5b9a\u4e49\u3002
+
+apis\u5b9a\u4e49\u4e3ajson\u6570\u7ec4\u683c\u5f0f\uff0c\u5e94\u5305\u542b\u4ee5\u4e0b\u5b57\u6bb5\uff1a"><textarea class="save" cols="30" rows="10"></textarea></div><!----><!----><div class="modal" id="mo" style="display: none;"><div class="modal-box"><div ref_key="root" class="el-carousel el-carousel--horizontal"><div class="el-carousel__container" style="height: 560px;"><!--v-if--><!--v-if--><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/8f4d1bce70c044f0a8ac7bce2479bfa9.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/483fcb9ef38347fabf19e04f6631c080.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/90f74d2f7df84eda97fe68547a5927ee.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/9e2885faf1ee47d1a7095a77812ab9c9.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/066f88a860694266a2aa905d5da295fb.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/69f4e23a0793461b8b10319d1024a321.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/997b43b83c7944c4831178ccdd5aa980.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/f40ff5ec8ec349d28b0e629b59722f02.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/6469b8f4d14c4d98876992f39836d299.jpg"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/c14e6f832b764fb6be09c94b1465cbd1.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/de28d8a075ae412bb0748bb0527434fd.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/527d9aae510143ef9adf79808386f115.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/b90134c2fc0b43e58dd2689b88dd3f2f.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/a25022c5edb949adaa3bd58826e76be0.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/8e50059f0b95463cb6d60b0b4d9ebc0b.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/75603a212c4b4bd8807dbbfce81d94cf.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/36eb2982d5b544338b23f88979730a9e.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/91e3f2ccd896468dbe1c3322198826ab.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/6c023d3867a04e968c0317da734c16cc.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/61cd90a8ee9e4f68948ae8b27d6ea055.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/0814c9b2d2ad4ee187ea62766d9ef506.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/43a14d3cf7374ceb8bf1ef7a4ca6dd05.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/cb376963aa034d9f9ff738fa27156e48.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/098c4e710da442a684a58791ef1b4305.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/62fc4b44ec8d4d42953454e61af3561f.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/9d13ffcf56a4409bbc0b95250e36217a.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/df4b06b4d7b5430a89a6144bf05edb85.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/05847fb202cd4b489f178984754b51c3.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/eb14cb6f6ed84b87ab65da820ac0b667.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/7f873b1035b3485fb46c31c6e2b7fc49.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/bf0d581266d242a6a87a7f78ce5bfa04.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/e0ccbd0db8ac4b0fac917866a1686bcb.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/8dd25a17ef1f4704a3add76d982feb37.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/818f59fa62b34efd8ec026e1a95cb57e.png"></div></div><div class="el-carousel__item is-active is-animating" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/d0b34456fbc04db6988615bca389eb54.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/080e1ec1b5f64506b49428350772f3ea.png"></div></div><div class="el-carousel__item" style="transform: translateX(0px) scale(1);"><!--v-if--><div class="ckg-contain"><img class="ckg" src="./线下AI模型迁移ModelArts部署实验-华为云_files/b5649f9ef8eb490d815d183f729c418d.png"></div></div></div><!--v-if--></div><div class="close"><i class="el-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="m466.752 512-90.496-90.496a32 32 0 0 1 45.248-45.248L512 466.752l90.496-90.496a32 32 0 1 1 45.248 45.248L557.248 512l90.496 90.496a32 32 0 1 1-45.248 45.248L512 557.248l-90.496 90.496a32 32 0 0 1-45.248-45.248L466.752 512z"></path><path fill="currentColor" d="M512 896a384 384 0 1 0 0-768 384 384 0 0 0 0 768zm0 64a448 448 0 1 1 0-896 448 448 0 0 1 0 896z"></path></svg></i></div></div><div class="modal-btn"><span class="left-icon"><i class="el-icon" style="font-size: 18px; --color: undefined;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="M609.408 149.376 277.76 489.6a32 32 0 0 0 0 44.672l331.648 340.352a29.12 29.12 0 0 0 41.728 0 30.592 30.592 0 0 0 0-42.752L339.264 511.936l311.872-319.872a30.592 30.592 0 0 0 0-42.688 29.12 29.12 0 0 0-41.728 0z"></path></svg></i></span><span class="pic-num">35 / 37</span><span class="right-icon"><i class="el-icon" style="font-size: 18px; --color: undefined;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="M340.864 149.312a30.592 30.592 0 0 0 0 42.752L652.736 512 340.864 831.872a30.592 30.592 0 0 0 0 42.752 29.12 29.12 0 0 0 41.728 0L714.24 534.336a32 32 0 0 0 0-44.672L382.592 149.376a29.12 29.12 0 0 0-41.728 0z"></path></svg></i></span></div></div></div><div id="walkthrough-content"><div id="walkthrough-0"><h3>为实现最佳实验体验，请将本地屏幕分辨率设置为1920*1080，缩放比例为100%。</h3></div><div id="walkthrough-1"><span class="line_left_img"></span><span class="line_mid_img"></span><p>请使用“华为云实验账号”在“IAM用户登录”模式下登录，保证实验顺利进行</p><img class="iam_img" src="./线下AI模型迁移ModelArts部署实验-华为云_files/IAM.cec53d81.png"><span class="line_img"></span><span class="circle_img"></span><span class="triangle_img"></span></div><div id="walkthrough-2" data-lang-token="walkthrough-2">实验操作指导手册在这里，完成对应步骤左侧导航会点亮，点击导航点可跳至对应步骤。</div><div id="walkthrough-7" data-lang-token="walkthrough-7">点击反馈实验手册问题</div><div id="walkthrough-8" data-lang-token="walkthrough-8">查看实验进度、剩余时间； 点击【延时】可延长实验时间；<br> 点击【结束实验】可退出实验环境。<br></div><div id="walkthrough-4" data-lang-token="walkthrough-4"><ul><li>切换全屏</li><li>复制粘贴</li><li>过程记录</li><li>远程支持</li><li>新手引导</li></ul></div><div id="walkthrough-11" data-lang-token="walkthrough-11">点击进入实验拓扑图页面，查看实验操作思路。</div><div id="walkthrough-5" data-lang-token="walkthrough-5">点击PC电脑图标进入实验操作界面</div></div><input name="CBC_RiskCheck_RiskInfo_Form" id="CBC_RiskCheck_RiskInfo_Form" type="hidden"><input type="hidden" name="hwmeta" id="hwmeta" value="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"></input><div id="test_mask" data-show="true" style="display: none;"><div class="test_evaluate"><div class="close_evaluate"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAK1JREFUeNpiYBgFVAczZ840IEUtEAsgizFhUVcPVDSfCMMSgNR5IFYgZGAiEBvgMxRqGEg+MT09/QKyHCMODSBv7AfiC0ANiXgMW4CulxGPKzAMJWQYXgPRDQXig4QMI2ggkqGwwMdrGK5IQQcBUMMeALE9IcVMRCSN+dCYNyQU+4QiBSMC8MU+oWSDMzYJGcpIimHEGIotDPUJxSZQ7gOQcgRiAVLy/jAFAAEGAH4SYGy7Si86AAAAAElFTkSuQmCC"></div><div class="evaluate_title"><img src="data:image/png;base64,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">恭喜您，您已完成本次实验！</div><div class="evaluate_fraction"><span class="evaluate_k" style="color: rgb(87, 93, 108);">评分：</span><div id="startone" class="block clearfix"><div class="star_score" style="width: 85px;"><a href="javascript:void(0)" style="width: 8.5px; z-index: 10; left: 0px;" class=""></a><a href="javascript:void(0)" style="width: 17px; z-index: 9; left: 0px;"></a><a href="javascript:void(0)" style="width: 25.5px; z-index: 8; left: 0px;"></a><a href="javascript:void(0)" style="width: 34px; z-index: 7; left: 0px;"></a><a href="javascript:void(0)" style="width: 42.5px; z-index: 6; left: 0px;"></a><a href="javascript:void(0)" style="width: 51px; z-index: 5; left: 0px;"></a><a href="javascript:void(0)" style="width: 59.5px; z-index: 4; left: 0px;"></a><a href="javascript:void(0)" style="width: 68px; z-index: 3; left: 0px;" class=""></a><a href="javascript:void(0)" style="width: 76.5px; z-index: 2; left: 0px;" class=""></a><a href="javascript:void(0)" style="width: 85px; z-index: 1; left: 0px;" class="clibg"></a></div><p style="float: left;"><span class="fenshu">5</span><span class="fraction">分</span></p><span class="score_prompt" style="display: none;">请对本次实验进行评分</span></div></div><div class="textarea_box"><textarea class="" placeholder="请在此留下您的评价，字数限制10字以上，255字以内"></textarea><p class="font_hint"><span class="current_sum">3</span>/<span>255</span></p></div><a class="test_evaluate_bg" href="https://lab.huaweicloud.com/" target="_blank" style="display: none;"><p style="word-break: break-word;"></p></a><button class="submit" disabled="disabled">确定</button></div></div></div></div></div><div ref_key="instance" class="el-scrollbar__bar is-horizontal" style="display: none;"><div ref_key="thumb" class="el-scrollbar__thumb" style="transform: translateX(0%);"></div></div><div ref_key="instance" class="el-scrollbar__bar is-vertical" style="display: none;"><div ref_key="thumb" class="el-scrollbar__thumb" style="transform: translateY(0%);"></div></div></div></div></div><script type="text/javascript" src="./线下AI模型迁移ModelArts部署实验-华为云_files/portal-global.js.download"></script><script type="text/javascript" src="./线下AI模型迁移ModelArts部署实验-华为云_files/bi_new(1).js.download"></script><script type="text/javascript" src="./线下AI模型迁移ModelArts部署实验-华为云_files/polyfill.min.js.download"></script><script type="text/javascript" src="./线下AI模型迁移ModelArts部署实验-华为云_files/LinkTo.umd.js.download"></script><script type="text/javascript" src="./线下AI模型迁移ModelArts部署实验-华为云_files/index.js.download"></script><script type="text/javascript" src="./线下AI模型迁移ModelArts部署实验-华为云_files/Login.umd.js.download"></script><script type="text/javascript" src="./线下AI模型迁移ModelArts部署实验-华为云_files/feloader.js.download"></script><script type="text/javascript" src="./线下AI模型迁移ModelArts部署实验-华为云_files/portal-common.min.js.download"></script><script type="text/javascript" src="./线下AI模型迁移ModelArts部署实验-华为云_files/wise_trace.min.js.download"></script><script type="text/javascript" src="./线下AI模型迁移ModelArts部署实验-华为云_files/HeaderAndFooter.header-china.umd.js.download"></script><script type="text/javascript" src="./线下AI模型迁移ModelArts部署实验-华为云_files/jquery.xdomainrequest.min.js.download"></script><script type="text/javascript" src="./线下AI模型迁移ModelArts部署实验-华为云_files/ecology-trainhome.js.download"></script><script type="text/javascript" src="./线下AI模型迁移ModelArts部署实验-华为云_files/jquery.base64.js.download"></script><script type="text/javascript" src="./线下AI模型迁移ModelArts部署实验-华为云_files/global.js.download"></script><script type="text/javascript" src="./线下AI模型迁移ModelArts部署实验-华为云_files/jquery.qrcode.min.js.download"></script><script type="text/javascript" src="./线下AI模型迁移ModelArts部署实验-华为云_files/uba.js.download" async=""></script><script src="./线下AI模型迁移ModelArts部署实验-华为云_files/acctguard.js.download"></script><script type="text/javascript" async="" src="./线下AI模型迁移ModelArts部署实验-华为云_files/raven.min.js.download"></script><script type="text/javascript" async="" src="./线下AI模型迁移ModelArts部署实验-华为云_files/uba.in.js.download"></script></body></html>
